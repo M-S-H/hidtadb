@@ -1,0 +1,25 @@
+<h1>Listing siezure_reports</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @siezure_reports.each do |siezure_report| %>
+      <tr>
+        <td><%= link_to 'Show', siezure_report %></td>
+        <td><%= link_to 'Edit', edit_siezure_report_path(siezure_report) %></td>
+        <td><%= link_to 'Destroy', siezure_report, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Siezure report', new_siezure_report_path %>
