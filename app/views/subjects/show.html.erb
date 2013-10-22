@@ -1,4 +1,69 @@
 <p id="notice"><%= notice %></p>
 
+<p>
+  <strong>Name:</strong>
+  <%= @subject.name %>
+</p>
+
+<p>
+  <strong>Dob:</strong>
+  <%= @subject.dob %>
+</p>
+
+<p>
+  <strong>Ssn:</strong>
+  <%= @subject.ssn %>
+</p>
+
+<p>
+  <strong>Oln:</strong>
+  <%= @subject.oln %>
+</p>
+
+<p>
+  <strong>Gender:</strong>
+  <%= @subject.gender %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @subject.address %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= @subject.city %>
+</p>
+
+<p>
+  <strong>State:</strong>
+  <%= @subject.state %>
+</p>
+
+<p>
+  <strong>Zip:</strong>
+  <%= @subject.zip %>
+</p>
+
+<p>
+  <strong>Passanger:</strong>
+  <%= @subject.passanger %>
+</p>
+
+<p>
+  <strong>Misc:</strong>
+  <%= @subject.misc %>
+</p>
+
+<p>
+  <strong>Citizenship:</strong>
+  <%= @subject.citizenship %>
+</p>
+
+<p>
+  <strong>Siezure report:</strong>
+  <%= @subject.siezure_report_id %>
+</p>
+
 <%= link_to 'Edit', edit_subject_path(@subject) %> |
 <%= link_to 'Back', subjects_path %>

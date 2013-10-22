@@ -18,7 +18,7 @@ class SubjectsControllerTest < ActionController::TestCase
 
   test "should create subject" do
     assert_difference('Subject.count') do
-      post :create, subject: {  }
+      post :create, subject: { address: @subject.address, citizenship: @subject.citizenship, city: @subject.city, dob: @subject.dob, gender: @subject.gender, misc: @subject.misc, name: @subject.name, oln: @subject.oln, passanger: @subject.passanger, siezure_report_id: @subject.siezure_report_id, ssn: @subject.ssn, state: @subject.state, zip: @subject.zip }
     end
 
     assert_redirected_to subject_path(assigns(:subject))
@@ -35,7 +35,7 @@ class SubjectsControllerTest < ActionController::TestCase
   end
 
   test "should update subject" do
-    patch :update, id: @subject, subject: {  }
+    patch :update, id: @subject, subject: { address: @subject.address, citizenship: @subject.citizenship, city: @subject.city, dob: @subject.dob, gender: @subject.gender, misc: @subject.misc, name: @subject.name, oln: @subject.oln, passanger: @subject.passanger, siezure_report_id: @subject.siezure_report_id, ssn: @subject.ssn, state: @subject.state, zip: @subject.zip }
     assert_redirected_to subject_path(assigns(:subject))
   end
 

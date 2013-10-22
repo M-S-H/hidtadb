@@ -3,6 +3,33 @@
 <table>
   <thead>
     <tr>
+      <th>Taskforce</th>
+      <th>Agency</th>
+      <th>Casenum</th>
+      <th>Cjis</th>
+      <th>Initiative</th>
+      <th>Siezuredate</th>
+      <th>Siezuretime</th>
+      <th>Siezuretype</th>
+      <th>Hheop</th>
+      <th>Road</th>
+      <th>Mile marker</th>
+      <th>Direction</th>
+      <th>Address</th>
+      <th>City</th>
+      <th>Country</th>
+      <th>State</th>
+      <th>Zip</th>
+      <th>Narrative</th>
+      <th>Analytical</th>
+      <th>Concealment method</th>
+      <th>False compartment</th>
+      <th>Compartment location</th>
+      <th>Cargo state type</th>
+      <th>K9used</th>
+      <th>Lab stash house</th>
+      <th>Poc</th>
+      <th>Pocphone</th>
       <th></th>
       <th></th>
       <th></th>
@@ -12,6 +39,33 @@
   <tbody>
     <% @siezure_reports.each do |siezure_report| %>
       <tr>
+        <td><%= siezure_report.taskforce %></td>
+        <td><%= siezure_report.agency %></td>
+        <td><%= siezure_report.casenum %></td>
+        <td><%= siezure_report.cjis %></td>
+        <td><%= siezure_report.initiative %></td>
+        <td><%= siezure_report.siezuredate %></td>
+        <td><%= siezure_report.siezuretime %></td>
+        <td><%= siezure_report.siezuretype %></td>
+        <td><%= siezure_report.hheop %></td>
+        <td><%= siezure_report.road %></td>
+        <td><%= siezure_report.mile_marker %></td>
+        <td><%= siezure_report.direction %></td>
+        <td><%= siezure_report.address %></td>
+        <td><%= siezure_report.city %></td>
+        <td><%= siezure_report.country %></td>
+        <td><%= siezure_report.state %></td>
+        <td><%= siezure_report.zip %></td>
+        <td><%= siezure_report.narrative %></td>
+        <td><%= siezure_report.analytical %></td>
+        <td><%= siezure_report.concealment_method %></td>
+        <td><%= siezure_report.false_compartment %></td>
+        <td><%= siezure_report.compartment_location %></td>
+        <td><%= siezure_report.cargo_state_type %></td>
+        <td><%= siezure_report.k9used %></td>
+        <td><%= siezure_report.lab_stash_house %></td>
+        <td><%= siezure_report.poc %></td>
+        <td><%= siezure_report.pocphone %></td>
         <td><%= link_to 'Show', siezure_report %></td>
         <td><%= link_to 'Edit', edit_siezure_report_path(siezure_report) %></td>
         <td><%= link_to 'Destroy', siezure_report, method: :delete, data: { confirm: 'Are you sure?' } %></td>

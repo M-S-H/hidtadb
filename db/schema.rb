@@ -11,17 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131015201439) do
-
-  create_table "audits", force: true do |t|
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "organizations", force: true do |t|
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
+ActiveRecord::Schema.define(version: 20131022002117) do
 
   create_table "siezure_reports", force: true do |t|
     t.string   "taskforce"
@@ -41,7 +31,7 @@ ActiveRecord::Schema.define(version: 20131015201439) do
     t.string   "country"
     t.string   "state"
     t.string   "zip"
-    t.text     "narrative"
+    t.string   "narrative"
     t.boolean  "analytical"
     t.string   "concealment_method"
     t.boolean  "false_compartment"
@@ -60,14 +50,15 @@ ActiveRecord::Schema.define(version: 20131015201439) do
     t.date     "dob"
     t.string   "ssn"
     t.string   "oln"
-    t.boolean  "gender"
+    t.string   "gender"
     t.string   "address"
     t.string   "city"
     t.string   "state"
     t.string   "zip"
     t.boolean  "passanger"
-    t.string   "misc"
+    t.text     "misc"
     t.string   "citizenship"
+    t.integer  "siezure_report_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -80,6 +71,8 @@ ActiveRecord::Schema.define(version: 20131015201439) do
     t.string   "state"
     t.string   "color"
     t.string   "owner"
+    t.integer  "siezure_report_id"
+    t.integer  "subject_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

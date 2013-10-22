@@ -9,4 +9,4 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-HIDTA::Application.config.secret_key_base = '166f5fcb97b84a9da969e65d6702ac77407844a1e8bcd3d974c0c1e18df1874bf7aaaa8c27106b9218149606e494656c39d57fe13e605111a4570f9b0e74782f'
+HIDTA::Application.config.secret_key_base = '04e9a6b9521333819707f16e48680c9ea5d23b2fa65a465c46d3d01dbb96d40fdf0f29ac01e2aaa52c9a62cba35c841d3855c071f13c5ed579ae4b6cf682c866'

@@ -69,6 +69,6 @@ class SiezureReportsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def siezure_report_params
-      params[:siezure_report]
+      params.require(:siezure_report).permit(:taskforce, :agency, :casenum, :cjis, :initiative, :siezuredate, :siezuretime, :siezuretype, :hheop, :road, :mile_marker, :direction, :address, :city, :country, :state, :zip, :narrative, :analytical, :concealment_method, :false_compartment, :compartment_location, :cargo_state_type, :k9used, :lab_stash_house, :poc, :pocphone)
     end
 end
