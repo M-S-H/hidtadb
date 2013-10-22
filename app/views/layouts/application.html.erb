@@ -1,14 +1,29 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>HIDTA</title>
-  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
-  <%= csrf_meta_tags %>
+	<title>HIDTA</title>
+	<%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => false %>
+	<%= javascript_include_tag "application", "data-turbolinks-track" => false %>
+	<%= csrf_meta_tags %>
 </head>
 <body>
 
-<%= yield %>
+<header>
+	<div id="hwrap">
+	</div>
+</header>
+
+<div id="content">
+	<nav>
+		<a href="/siezure_reports"><div class="nav-item"></div></a>
+		<a href="/subjects"><div class="nav-item"></div></a>
+		<a href="/vehicles"><div class="nav-item"></div></a>
+	</nav>
+
+	<div id="page">
+		<%= yield %>
+	</div>
+</div>
 
 </body>
 </html>

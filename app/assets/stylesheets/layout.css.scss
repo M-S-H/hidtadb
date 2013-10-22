@@ -1,0 +1,58 @@
+@import "definitions.css.scss";
+
+body {
+	margin: 0px;
+	padding: 0px;
+
+	background-color: $lightgrey;
+	font-family: sans-serif;
+}
+
+
+header {
+	height: 100px;
+
+	background-color: $blue;
+	box-shadow: 0 0 3px #000;
+}
+
+
+#content {
+	width: 1020px;
+	margin-top: 20px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+nav {
+	width: 75px;
+	float: left;
+	margin-top: 50px;
+
+	background-color: $darkgrey;
+}
+
+
+.nav-item {
+	width: 75px;
+	height: 75px;
+
+	&:hover {
+		background-color: #4f4f4f;
+		box-shadow: inset 0 0 3px #000;
+	}
+}
+
+
+#page {
+	width: 905px;
+	min-height: 400px;
+	float: right;
+	padding: 20px;
+	overflow: hidden;
+
+	background-color: #FFF;
+	border-radius: 4px;
+	box-shadow: 0 0 5px #CCC;
+}
