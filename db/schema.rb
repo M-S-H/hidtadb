@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131023205839) do
+ActiveRecord::Schema.define(version: 20131024171824) do
 
   create_table "siezure_reports", force: true do |t|
     t.string   "taskforce"
@@ -43,6 +43,16 @@ ActiveRecord::Schema.define(version: 20131023205839) do
     t.string   "pocphone"
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "siezures", force: true do |t|
+    t.string   "drug_type"
+    t.float    "amount"
+    t.float    "price"
+    t.string   "currency"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "siezure_report_id"
   end
 
   create_table "subjects", force: true do |t|

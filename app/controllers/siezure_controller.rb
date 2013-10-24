@@ -1,0 +1,2 @@
+class SiezureController < ApplicationController
+end

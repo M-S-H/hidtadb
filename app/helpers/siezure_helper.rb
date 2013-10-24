@@ -1,0 +1,2 @@
+module SiezureHelper
+end
