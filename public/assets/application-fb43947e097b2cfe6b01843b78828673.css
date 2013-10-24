@@ -1,0 +1,261 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+
+
+ */
+
+input[type=text], textarea {
+  padding-left: 5px;
+  border: 1px solid #CCC;
+  background-color: rgba(0, 0, 0, 0.02);
+  box-shadow: inset 0 0 2px #CCC;
+  border-radius: 1px; }
+  input[type=text]:focus, textarea:focus {
+    outline: none;
+    border: 1px solid #AAA;
+    box-shadow: inset 0 0 2px #CCC, 0 0 2px #CCC; }
+
+input[type=text] {
+  width: 225px;
+  height: 25px; }
+
+textarea {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-right: 5px;
+  resize: none; }
+
+label {
+  font-size: 14px;
+  margin-bottom: 5px;
+  color: #2c2c2c; }
+
+.field {
+  margin-bottom: 15px; }
+
+.divider {
+  width: 100%;
+  height: 1px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  border-bottom: 1px dotted #CCC;
+  border-top: 1px dotted #CCC; }
+
+.listtable {
+  width: 100%;
+  text-align: center;
+  border-collapse: collapse; }
+  .listtable #thead {
+    margin-bottom: 10px;
+    border-radius: 3px; }
+  .listtable th {
+    background-color: #2c2c2c;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: #FFF; }
+  .listtable td {
+    background-color: rgba(0, 0, 0, 0.01);
+    padding-top: 8px;
+    padding-bottom: 8px;
+    border-bottom: 1px dotted #CCC; }
+  .listtable a {
+    color: #31557b; }
+input[type=text], textarea {
+  padding-left: 5px;
+  border: 1px solid #CCC;
+  background-color: rgba(0, 0, 0, 0.02);
+  box-shadow: inset 0 0 2px #CCC;
+  border-radius: 1px; }
+  input[type=text]:focus, textarea:focus {
+    outline: none;
+    border: 1px solid #AAA;
+    box-shadow: inset 0 0 2px #CCC, 0 0 2px #CCC; }
+
+input[type=text] {
+  width: 225px;
+  height: 25px; }
+
+textarea {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-right: 5px;
+  resize: none; }
+
+label {
+  font-size: 14px;
+  margin-bottom: 5px;
+  color: #2c2c2c; }
+
+.field {
+  margin-bottom: 15px; }
+
+.divider {
+  width: 100%;
+  height: 1px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  border-bottom: 1px dotted #CCC;
+  border-top: 1px dotted #CCC; }
+
+.listtable {
+  width: 100%;
+  text-align: center;
+  border-collapse: collapse; }
+  .listtable #thead {
+    margin-bottom: 10px;
+    border-radius: 3px; }
+  .listtable th {
+    background-color: #2c2c2c;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: #FFF; }
+  .listtable td {
+    background-color: rgba(0, 0, 0, 0.01);
+    padding-top: 8px;
+    padding-bottom: 8px;
+    border-bottom: 1px dotted #CCC; }
+  .listtable a {
+    color: #31557b; }
+
+body {
+  margin: 0px;
+  padding: 0px;
+  background-color: #eaeaea;
+  font-family: sans-serif; }
+
+header {
+  height: 100px;
+  background-color: #1b2f44;
+  box-shadow: 0 0 3px #000; }
+
+#hwrap {
+  width: 1020px;
+  margin-left: auto;
+  margin-right: auto; }
+  #hwrap h1 {
+    float: left;
+    color: #FFF;
+    margin-top: 29px; }
+
+#logo {
+  float: left;
+  margin-right: 20px; }
+
+#content {
+  width: 1020px;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto; }
+
+nav {
+  width: 75px;
+  float: left;
+  margin-top: 50px;
+  background-color: #2c2c2c; }
+
+.nav-item {
+  width: 75px;
+  height: 75px;
+  color: #FFF;
+  font-size: 11px;
+  text-align: center; }
+  .nav-item:hover {
+    background-color: #4f4f4f;
+    box-shadow: inset 0 0 3px #000;
+    color: #CCC; }
+    .nav-item:hover img {
+      opacity: 0.5; }
+
+#page {
+  width: 905px;
+  min-height: 400px;
+  float: right;
+  padding: 20px;
+  overflow: hidden;
+  margin-bottom: 40px;
+  background-color: #FFF;
+  border-radius: 4px;
+  box-shadow: 0 0 5px #CCC; }
+/*
+body {
+  background-color: #fff;
+  color: #333;
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+p, ol, ul, td {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+pre {
+  background-color: #eee;
+  padding: 10px;
+  font-size: 11px;
+}
+
+a {
+  color: #000;
+  &:visited {
+    color: #666;
+  }
+  &:hover {
+    color: #fff;
+    background-color: #000;
+  }
+}
+
+div {
+  &.field, &.actions {
+    margin-bottom: 10px;
+  }
+}
+
+#notice {
+  color: green;
+}
+
+.field_with_errors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+#error_explanation {
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+  h2 {
+    text-align: left;
+    font-weight: bold;
+    padding: 5px 5px 5px 15px;
+    font-size: 12px;
+    margin: -7px;
+    margin-bottom: 0px;
+    background-color: #c00;
+    color: #fff;
+  }
+  ul li {
+    font-size: 12px;
+    list-style: square;
+  }
+}
+*/
