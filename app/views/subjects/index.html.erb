@@ -1,49 +1,29 @@
 <h1>Listing subjects</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Dob</th>
-      <th>Ssn</th>
-      <th>Oln</th>
-      <th>Gender</th>
-      <th>Address</th>
-      <th>City</th>
-      <th>State</th>
-      <th>Zip</th>
-      <th>Passanger</th>
-      <th>Misc</th>
-      <th>Citizenship</th>
-      <th>Siezure report</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
+<table class="listtable">
+	<thead>
+		<tr>
+			<th>Name</th>
+			<th>Dob</th>
+			<th>Ssn</th>
+			<th>State</th>
+			<th></th>
+			<th></th>
+		</tr>
+	</thead>
 
-  <tbody>
-    <% @subjects.each do |subject| %>
-      <tr>
-        <td><%= subject.name %></td>
-        <td><%= subject.dob %></td>
-        <td><%= subject.ssn %></td>
-        <td><%= subject.oln %></td>
-        <td><%= subject.gender %></td>
-        <td><%= subject.address %></td>
-        <td><%= subject.city %></td>
-        <td><%= subject.state %></td>
-        <td><%= subject.zip %></td>
-        <td><%= subject.passanger %></td>
-        <td><%= subject.misc %></td>
-        <td><%= subject.citizenship %></td>
-        <td><%= subject.siezure_report_id %></td>
-        <td><%= link_to 'Show', subject %></td>
-        <td><%= link_to 'Edit', edit_subject_path(subject) %></td>
-        <td><%= link_to 'Destroy', subject, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
+	<tbody>
+		<% @subjects.each do |subject| %>
+			<tr>
+				<td><%= link_to subject.name, subject %></td>
+				<td><%= subject.dob %></td>
+				<td><%= subject.ssn %></td>
+				<td><%= subject.state %></td>
+				<td><%= link_to 'Edit', edit_subject_path(subject) %></td>
+				<td><%= link_to 'Destroy', subject, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+			</tr>
+		<% end %>
+	</tbody>
 </table>
 
 <br>

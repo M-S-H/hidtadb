@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131022002117) do
+ActiveRecord::Schema.define(version: 20131023205839) do
 
   create_table "siezure_reports", force: true do |t|
     t.string   "taskforce"
@@ -31,7 +31,7 @@ ActiveRecord::Schema.define(version: 20131022002117) do
     t.string   "country"
     t.string   "state"
     t.string   "zip"
-    t.string   "narrative"
+    t.text     "narrative"
     t.boolean  "analytical"
     t.string   "concealment_method"
     t.boolean  "false_compartment"

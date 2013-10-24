@@ -1,125 +1,228 @@
 <%= form_for(@siezure_report) do |f| %>
-  <% if @siezure_report.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@siezure_report.errors.count, "error") %> prohibited this siezure_report from being saved:</h2>
+	<% if @siezure_report.errors.any? %>
+		<div id="error_explanation">
+			<h2><%= pluralize(@siezure_report.errors.count, "error") %> prohibited this siezure_report from being saved:</h2>
 
-      <ul>
-      <% @siezure_report.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+			<ul>
+			<% @siezure_report.errors.full_messages.each do |msg| %>
+				<li><%= msg %></li>
+			<% end %>
+			</ul>
+		</div>
+	<% end %>
 
-  <div class="field">
-    <%= f.label :taskforce %><br>
-    <%= f.text_field :taskforce %>
-  </div>
-  <div class="field">
-    <%= f.label :agency %><br>
-    <%= f.text_field :agency %>
-  </div>
-  <div class="field">
-    <%= f.label :casenum %><br>
-    <%= f.text_field :casenum %>
-  </div>
-  <div class="field">
-    <%= f.label :cjis %><br>
-    <%= f.text_field :cjis %>
-  </div>
-  <div class="field">
-    <%= f.label :initiative %><br>
-    <%= f.text_field :initiative %>
-  </div>
-  <div class="field">
-    <%= f.label :siezuredate %><br>
-    <%= f.date_select :siezuredate %>
-  </div>
-  <div class="field">
-    <%= f.label :siezuretime %><br>
-    <%= f.time_select :siezuretime %>
-  </div>
-  <div class="field">
-    <%= f.label :siezuretype %><br>
-    <%= f.text_field :siezuretype %>
-  </div>
-  <div class="field">
-    <%= f.label :hheop %><br>
-    <%= f.check_box :hheop %>
-  </div>
-  <div class="field">
-    <%= f.label :road %><br>
-    <%= f.text_field :road %>
-  </div>
-  <div class="field">
-    <%= f.label :mile_marker %><br>
-    <%= f.text_field :mile_marker %>
-  </div>
-  <div class="field">
-    <%= f.label :direction %><br>
-    <%= f.text_field :direction %>
-  </div>
-  <div class="field">
-    <%= f.label :address %><br>
-    <%= f.text_field :address %>
-  </div>
-  <div class="field">
-    <%= f.label :city %><br>
-    <%= f.text_field :city %>
-  </div>
-  <div class="field">
-    <%= f.label :country %><br>
-    <%= f.text_field :country %>
-  </div>
-  <div class="field">
-    <%= f.label :state %><br>
-    <%= f.text_field :state %>
-  </div>
-  <div class="field">
-    <%= f.label :zip %><br>
-    <%= f.text_field :zip %>
-  </div>
-  <div class="field">
-    <%= f.label :narrative %><br>
-    <%= f.text_field :narrative %>
-  </div>
-  <div class="field">
-    <%= f.label :analytical %><br>
-    <%= f.check_box :analytical %>
-  </div>
-  <div class="field">
-    <%= f.label :concealment_method %><br>
-    <%= f.text_field :concealment_method %>
-  </div>
-  <div class="field">
-    <%= f.label :false_compartment %><br>
-    <%= f.check_box :false_compartment %>
-  </div>
-  <div class="field">
-    <%= f.label :compartment_location %><br>
-    <%= f.text_field :compartment_location %>
-  </div>
-  <div class="field">
-    <%= f.label :cargo_state_type %><br>
-    <%= f.text_field :cargo_state_type %>
-  </div>
-  <div class="field">
-    <%= f.label :k9used %><br>
-    <%= f.check_box :k9used %>
-  </div>
-  <div class="field">
-    <%= f.label :lab_stash_house %><br>
-    <%= f.text_field :lab_stash_house %>
-  </div>
-  <div class="field">
-    <%= f.label :poc %><br>
-    <%= f.text_field :poc %>
-  </div>
-  <div class="field">
-    <%= f.label :pocphone %><br>
-    <%= f.text_field :pocphone %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+	<h3>General Information</h3>
+
+	<table width="100%">
+		<tr>
+			<td>
+				<div class="field">
+					<%= f.label :taskforce %><br>
+					<%= f.text_field :taskforce %>
+				</div>
+			</td>
+			<td>
+				<div class="field">
+					<%= f.label :agency %><br>
+					<%= f.text_field :agency %>
+				</div>
+			</td>
+			<td>
+				<div class="field">
+					<%= f.label :casenum %><br>
+					<%= f.text_field :casenum %>
+				</div>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<div class="field">
+					<%= f.label :cjis %><br>
+					<%= f.text_field :cjis %>
+				</div>
+			</td>
+			<td>
+				<div class="field">
+					<%= f.label :initiative %><br>
+					<%= f.text_field :initiative %>
+				</div>
+			</td>
+			<td>
+				<div class="field">
+					<%= f.label :siezuredate %><br>
+					<%= f.date_select :siezuredate %>
+				</div>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<div class="field">
+					<%= f.label :siezuretime %><br>
+					<%= f.time_select :siezuretime %>
+				</div>
+			</td>
+			<td>
+				<div class="field">
+					<%= f.label :siezuretype %><br>
+					<%= f.text_field :siezuretype %>
+				</div>
+			</td>
+			<td>
+				<div class="field">
+					<%= f.label :hheop %><br>
+					<%= f.check_box :hheop %>
+				</div>
+			</td>
+		</tr>
+	</table>
+
+	<div class="divider"></div>
+	<h3>Location</h3>
+
+	<table width="100%">
+		<tr>
+			<td>
+				<div class="field">
+					<%= f.label :road %><br>
+					<%= f.text_field :road %>
+				</div>
+			</td>
+			<td>
+				<div class="field">
+					<%= f.label :mile_marker %><br>
+					<%= f.text_field :mile_marker %>
+				</div>
+			</td>
+			<td>
+				<div class="field">
+					<%= f.label :direction %><br>
+					<%= f.text_field :direction %>
+				</div>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<div class="field">
+					<%= f.label :address %><br>
+					<%= f.text_field :address %>
+				</div>
+			</td>
+			<td>
+				<div class="field">
+					<%= f.label :city %><br>
+					<%= f.text_field :city %>
+				</div>
+			</td>
+			<td>
+				<div class="field">
+					<%= f.label :country %><br>
+					<%= f.text_field :country %>
+				</div>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<div class="field">
+					<%= f.label :state %><br>
+					<%= f.text_field :state %>
+				</div>
+			</td>
+			<td>
+				<div class="field">
+					<%= f.label :zip %><br>
+					<%= f.text_field :zip %>
+				</div>
+			</td>
+		</tr>
+	</table>
+
+	<div class="divider"></div>
+	<h3>Narrative</h3>
+
+	<div class="field">
+		<%= f.text_area :narrative, style: "width: 99%; height: 150px;" %>
+	</div>
+
+	<div class="divider"></div>
+	<h3>Additional Factors</h3>
+
+	<table width="100%">
+		<tr>
+			<td>
+				<div class="field">
+					<%= f.label :analytical %><br>
+					<%= f.check_box :analytical %>
+				</div>
+			</td>
+			<td>
+				<div class="field">
+					<%= f.label :concealment_method %><br>
+					<%= f.text_field :concealment_method %>
+				</div>
+			</td>
+			<td>
+				<div class="field">
+					<%= f.label :false_compartment %><br>
+					<%= f.check_box :false_compartment %>
+				</div>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<div class="field">
+					<%= f.label :compartment_location %><br>
+					<%= f.text_field :compartment_location %>
+				</div>
+			</td>
+			<td>
+				<div class="field">
+					<%= f.label :cargo_state_type %><br>
+					<%= f.text_field :cargo_state_type %>
+				</div>
+			</td>
+			<td>
+				<div class="field">
+					<%= f.label :k9used %><br>
+					<%= f.check_box :k9used %>
+				</div>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<div class="field">
+					<%= f.label :lab_stash_house %><br>
+					<%= f.text_field :lab_stash_house %>
+				</div>
+			</td>
+			<td></td>
+			<td></td>
+		</tr>
+	</table>
+
+	<div class="divider"></div>
+	<h3>Point of Contact</h3>
+	<table width="100%">
+		<tr>
+			<td>
+				<div class="field">
+					<%= f.label :poc %><br>
+					<%= f.text_field :poc %>
+				</div>
+			</td>
+			<td>
+				<div class="field">
+					<%= f.label :pocphone %><br>
+					<%= f.text_field :pocphone %>
+				</div>
+			</td>
+
+		</tr>
+	</table>
+
+
+	<div class="actions">
+		<%= f.submit %>
+	</div>
+
+	
 <% end %>
