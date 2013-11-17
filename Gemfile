@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+gem 'client_side_validations'
+
 gem 'rails', '4.0.0'
 
 gem 'sass-rails', '~> 4.0.0'
