@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  telephone_id: 1
+  seizure_report_id: 1
+  telephone_number: MyString
+
+two:
+  telephone_id: 1
+  seizure_report_id: 1
+  telephone_number: MyString
