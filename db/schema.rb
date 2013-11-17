@@ -11,7 +11,39 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131117203729) do
+ActiveRecord::Schema.define(version: 20131117213205) do
+
+  create_table "addresses", force: true do |t|
+    t.integer  "address_id"
+    t.integer  "street_number"
+    t.string   "street_name"
+    t.string   "city"
+    t.integer  "zip"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "drugs", force: true do |t|
+    t.string   "type_of_drug"
+    t.string   "amount"
+    t.string   "purchase_price"
+    t.string   "currency"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "locations", force: true do |t|
+    t.string   "road"
+    t.string   "mile_marker"
+    t.string   "direction"
+    t.string   "address"
+    t.string   "city"
+    t.string   "county"
+    t.string   "state"
+    t.string   "zip"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "siezure_reports", force: true do |t|
     t.string   "taskforce"
@@ -36,16 +68,6 @@ ActiveRecord::Schema.define(version: 20131117203729) do
     t.string   "pocphone"
     t.datetime "created_at"
     t.datetime "updated_at"
-  end
-
-  create_table "siezures", force: true do |t|
-    t.string   "drug_type"
-    t.float    "amount"
-    t.float    "price"
-    t.string   "currency"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.integer  "siezure_report_id"
   end
 
   create_table "subjects", force: true do |t|
@@ -76,6 +98,15 @@ ActiveRecord::Schema.define(version: 20131117203729) do
     t.string   "owner"
     t.integer  "siezure_report_id"
     t.integer  "subject_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "weapons", force: true do |t|
+    t.integer  "seizure_report_id"
+    t.string   "type"
+    t.string   "caliber"
+    t.string   "sn"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
