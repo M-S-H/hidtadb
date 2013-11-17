@@ -3,6 +3,11 @@
 <table>
   <thead>
     <tr>
+      <th>User</th>
+      <th>Action</th>
+      <th>Time</th>
+      <th>Date</th>
+      <th>Record</th>
       <th></th>
       <th></th>
       <th></th>
@@ -12,6 +17,11 @@
   <tbody>
     <% @audits.each do |audit| %>
       <tr>
+        <td><%= audit.user_id %></td>
+        <td><%= audit.action %></td>
+        <td><%= audit.time %></td>
+        <td><%= audit.date %></td>
+        <td><%= audit.record_id %></td>
         <td><%= link_to 'Show', audit %></td>
         <td><%= link_to 'Edit', edit_audit_path(audit) %></td>
         <td><%= link_to 'Destroy', audit, method: :delete, data: { confirm: 'Are you sure?' } %></td>

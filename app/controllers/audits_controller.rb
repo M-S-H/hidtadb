@@ -69,6 +69,6 @@ class AuditsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def audit_params
-      params[:audit]
+      params.require(:audit).permit(:user_id, :action, :time, :date, :record_id)
     end
 end

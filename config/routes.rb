@@ -1,5 +1,7 @@
 HIDTA::Application.routes.draw do
 
+  resources :audits
+
   resources :locations
 
 	root 'siezure_reports#index'

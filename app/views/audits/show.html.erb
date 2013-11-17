@@ -1,4 +1,29 @@
 <p id="notice"><%= notice %></p>
 
+<p>
+  <strong>User:</strong>
+  <%= @audit.user_id %>
+</p>
+
+<p>
+  <strong>Action:</strong>
+  <%= @audit.action %>
+</p>
+
+<p>
+  <strong>Time:</strong>
+  <%= @audit.time %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @audit.date %>
+</p>
+
+<p>
+  <strong>Record:</strong>
+  <%= @audit.record_id %>
+</p>
+
 <%= link_to 'Edit', edit_audit_path(@audit) %> |
 <%= link_to 'Back', audits_path %>

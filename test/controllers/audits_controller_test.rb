@@ -18,7 +18,7 @@ class AuditsControllerTest < ActionController::TestCase
 
   test "should create audit" do
     assert_difference('Audit.count') do
-      post :create, audit: {  }
+      post :create, audit: { action: @audit.action, date: @audit.date, record_id: @audit.record_id, time: @audit.time, user_id: @audit.user_id }
     end
 
     assert_redirected_to audit_path(assigns(:audit))
@@ -35,7 +35,7 @@ class AuditsControllerTest < ActionController::TestCase
   end
 
   test "should update audit" do
-    patch :update, id: @audit, audit: {  }
+    patch :update, id: @audit, audit: { action: @audit.action, date: @audit.date, record_id: @audit.record_id, time: @audit.time, user_id: @audit.user_id }
     assert_redirected_to audit_path(assigns(:audit))
   end
 
