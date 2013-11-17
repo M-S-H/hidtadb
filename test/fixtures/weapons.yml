@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  seizure_report_id: 1
+  type: 
+  caliber: MyString
+  sn: MyString
+
+two:
+  seizure_report_id: 1
+  type: 
+  caliber: MyString
+  sn: MyString
