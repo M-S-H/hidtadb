@@ -1,0 +1,57 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  requestor_name: MyString
+  requestor_agency: MyString
+  telephone_number: MyString
+  fax_number: MyString
+  agency_case_number: MyString
+  email_address: MyString
+  priority_id: 1
+  type_of_drug: MyString
+  subject_name: MyString
+  subject_address: MyString
+  subject_business_name: MyString
+  subject_alias: MyString
+  subject_dob: MyString
+  alien_registration_number: MyString
+  subject_sex: MyString
+  subject_race: MyString
+  subject_height: MyString
+  subject_weight: MyString
+  subject_ssn: MyString
+  subject_driver_license_number: MyString
+  vehicle_id: MyString
+  state_of_registration: MyString
+  vehicle_vin: MyString
+  subject_telephone_numbers: MyString
+  known_criminal_activity: MyString
+  information_needed: MyString
+
+two:
+  requestor_name: MyString
+  requestor_agency: MyString
+  telephone_number: MyString
+  fax_number: MyString
+  agency_case_number: MyString
+  email_address: MyString
+  priority_id: 1
+  type_of_drug: MyString
+  subject_name: MyString
+  subject_address: MyString
+  subject_business_name: MyString
+  subject_alias: MyString
+  subject_dob: MyString
+  alien_registration_number: MyString
+  subject_sex: MyString
+  subject_race: MyString
+  subject_height: MyString
+  subject_weight: MyString
+  subject_ssn: MyString
+  subject_driver_license_number: MyString
+  vehicle_id: MyString
+  state_of_registration: MyString
+  vehicle_vin: MyString
+  subject_telephone_numbers: MyString
+  known_criminal_activity: MyString
+  information_needed: MyString

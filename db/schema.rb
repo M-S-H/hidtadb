@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131117213205) do
+ActiveRecord::Schema.define(version: 20131117215543) do
 
   create_table "addresses", force: true do |t|
     t.integer  "address_id"
@@ -23,11 +23,38 @@ ActiveRecord::Schema.define(version: 20131117213205) do
     t.datetime "updated_at"
   end
 
+  create_table "arrests", force: true do |t|
+    t.integer  "arrest_id"
+    t.integer  "subject_id"
+    t.integer  "location_id"
+    t.date     "date"
+    t.string   "cause"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "audits", force: true do |t|
+    t.integer  "user_id"
+    t.string   "action"
+    t.time     "time"
+    t.date     "date"
+    t.integer  "record_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "drugs", force: true do |t|
     t.string   "type_of_drug"
     t.string   "amount"
     t.string   "purchase_price"
     t.string   "currency"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "dtos", force: true do |t|
+    t.integer  "dto_id"
+    t.string   "dto_name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -70,16 +97,6 @@ ActiveRecord::Schema.define(version: 20131117213205) do
     t.datetime "updated_at"
   end
 
-  create_table "siezures", force: true do |t|
-    t.string   "drug_type"
-    t.float    "amount"
-    t.float    "price"
-    t.string   "currency"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.integer  "siezure_report_id"
-  end
-
   create_table "subjects", force: true do |t|
     t.string   "name"
     t.date     "dob"
@@ -94,6 +111,14 @@ ActiveRecord::Schema.define(version: 20131117213205) do
     t.text     "misc"
     t.string   "citizenship"
     t.integer  "siezure_report_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "telephones", force: true do |t|
+    t.integer  "telephone_id"
+    t.integer  "seizure_report_id"
+    t.string   "telephone_number"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
