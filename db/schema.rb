@@ -70,6 +70,16 @@ ActiveRecord::Schema.define(version: 20131117213205) do
     t.datetime "updated_at"
   end
 
+  create_table "siezures", force: true do |t|
+    t.string   "drug_type"
+    t.float    "amount"
+    t.float    "price"
+    t.string   "currency"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "siezure_report_id"
+  end
+
   create_table "subjects", force: true do |t|
     t.string   "name"
     t.date     "dob"
