@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  dto_id: 1
+  dto_name: MyString
+
+two:
+  dto_id: 1
+  dto_name: MyString
