@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  type_of_drug: MyString
+  amount: MyString
+  purchase_price: MyString
+  currency: MyString
+
+two:
+  type_of_drug: MyString
+  amount: MyString
+  purchase_price: MyString
+  currency: MyString
