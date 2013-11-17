@@ -1,5 +1,6 @@
 HIDTA::Application.routes.draw do
 
+  devise_for :users
   resources :audits
 
   resources :locations
