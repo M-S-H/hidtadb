@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  arrest_id: 1
+  subject_id: 1
+  location_id: 1
+  date: 2013-11-17
+  cause: MyString
+
+two:
+  arrest_id: 1
+  subject_id: 1
+  location_id: 1
+  date: 2013-11-17
+  cause: MyString
