@@ -1,15 +1,17 @@
 class SubjectsController < ApplicationController
+  def search
+    @search = Subject.search(:incude => [:name,dob,ssn]) do
+      keywords(params[:q])
+    end
+  end
+
   before_action :set_subject, only: [:show, :edit, :update, :destroy]
   
   
   # GET /subjects
   # GET /subjects.json
   def index
-    @search = Subject.search do
-      fulltext params[:search]
-    end
-    @subjects = @search.results
-  # @subjects = Subject.all
+    @subjects = Subject.all
   end
 
   # GET /subjects/1

@@ -1,5 +1,9 @@
 source 'https://rubygems.org'
 
+gem 'sunspot_rails'
+
+gem 'sunspot_solr'
+
 gem 'client_side_validations'
 
 gem 'rails', '4.0.0'
