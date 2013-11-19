@@ -1,0 +1,363 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+
+
+ */
+
+input[type=text], textarea, input[type=email], input[type=password] {
+  padding-left: 5px;
+  border: 1px solid #CCC;
+  background-color: rgba(0, 0, 0, 0.02);
+  box-shadow: inset 0 0 2px #CCC;
+  border-radius: 1px; }
+  input[type=text]:focus, textarea:focus, input[type=email]:focus, input[type=password]:focus {
+    outline: none;
+    border: 1px solid #AAA;
+    box-shadow: inset 0 0 2px #CCC, 0 0 2px #CCC; }
+
+input[type=text] {
+  width: 225px;
+  height: 25px; }
+
+textarea {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-right: 5px;
+  resize: none; }
+
+label {
+  font-size: 14px;
+  margin-bottom: 5px;
+  color: #2c2c2c; }
+
+.field {
+  margin-bottom: 15px; }
+
+.divider {
+  width: 100%;
+  height: 1px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  border-bottom: 1px dotted #CCC;
+  border-top: 1px dotted #CCC; }
+
+.listtable {
+  width: 100%;
+  text-align: center;
+  border-collapse: collapse; }
+  .listtable #thead {
+    margin-bottom: 10px;
+    border-radius: 3px; }
+  .listtable th {
+    background-color: #2c2c2c;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: #FFF; }
+  .listtable td {
+    background-color: rgba(0, 0, 0, 0.01);
+    padding-top: 8px;
+    padding-bottom: 8px;
+    border-bottom: 1px dotted #CCC; }
+  .listtable a {
+    color: #31557b; }
+input[type=text], textarea, input[type=email], input[type=password] {
+  padding-left: 5px;
+  border: 1px solid #CCC;
+  background-color: rgba(0, 0, 0, 0.02);
+  box-shadow: inset 0 0 2px #CCC;
+  border-radius: 1px; }
+  input[type=text]:focus, textarea:focus, input[type=email]:focus, input[type=password]:focus {
+    outline: none;
+    border: 1px solid #AAA;
+    box-shadow: inset 0 0 2px #CCC, 0 0 2px #CCC; }
+
+input[type=text] {
+  width: 225px;
+  height: 25px; }
+
+textarea {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-right: 5px;
+  resize: none; }
+
+label {
+  font-size: 14px;
+  margin-bottom: 5px;
+  color: #2c2c2c; }
+
+.field {
+  margin-bottom: 15px; }
+
+.divider {
+  width: 100%;
+  height: 1px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  border-bottom: 1px dotted #CCC;
+  border-top: 1px dotted #CCC; }
+
+.listtable {
+  width: 100%;
+  text-align: center;
+  border-collapse: collapse; }
+  .listtable #thead {
+    margin-bottom: 10px;
+    border-radius: 3px; }
+  .listtable th {
+    background-color: #2c2c2c;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: #FFF; }
+  .listtable td {
+    background-color: rgba(0, 0, 0, 0.01);
+    padding-top: 8px;
+    padding-bottom: 8px;
+    border-bottom: 1px dotted #CCC; }
+  .listtable a {
+    color: #31557b; }
+
+body {
+  margin: 0px;
+  padding: 0px;
+  background-color: #eaeaea;
+  font-family: sans-serif; }
+
+header {
+  height: 100px;
+  background-color: #1b2f44;
+  box-shadow: 0 0 3px #000; }
+
+#hwrap {
+  width: 1020px;
+  margin-left: auto;
+  margin-right: auto; }
+  #hwrap h1 {
+    float: left;
+    color: #FFF;
+    margin-top: 29px; }
+
+#logo {
+  float: left;
+  margin-right: 20px; }
+
+#content {
+  width: 1020px;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto; }
+
+nav {
+  width: 75px;
+  float: left;
+  margin-top: 50px;
+  background-color: #2c2c2c; }
+
+.nav-item {
+  width: 75px;
+  height: 75px;
+  color: #FFF;
+  font-size: 11px;
+  text-align: center; }
+  .nav-item:hover {
+    background-color: #4f4f4f;
+    box-shadow: inset 0 0 3px #000;
+    color: #CCC; }
+    .nav-item:hover img {
+      opacity: 0.5; }
+
+#page {
+  width: 905px;
+  min-height: 400px;
+  float: right;
+  padding: 20px;
+  overflow: hidden;
+  margin-bottom: 40px;
+  background-color: #FFF;
+  border-radius: 4px;
+  box-shadow: 0 0 5px #CCC; }
+/*
+body {
+  background-color: #fff;
+  color: #333;
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+p, ol, ul, td {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+pre {
+  background-color: #eee;
+  padding: 10px;
+  font-size: 11px;
+}
+
+a {
+  color: #000;
+  &:visited {
+    color: #666;
+  }
+  &:hover {
+    color: #fff;
+    background-color: #000;
+  }
+}
+
+div {
+  &.field, &.actions {
+    margin-bottom: 10px;
+  }
+}
+
+#notice {
+  color: green;
+}
+
+.field_with_errors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+#error_explanation {
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+  h2 {
+    text-align: left;
+    font-weight: bold;
+    padding: 5px 5px 5px 15px;
+    font-size: 12px;
+    margin: -7px;
+    margin-bottom: 0px;
+    background-color: #c00;
+    color: #fff;
+  }
+  ul li {
+    font-size: 12px;
+    list-style: square;
+  }
+}
+*/
+input[type=text], textarea, input[type=email], input[type=password] {
+  padding-left: 5px;
+  border: 1px solid #CCC;
+  background-color: rgba(0, 0, 0, 0.02);
+  box-shadow: inset 0 0 2px #CCC;
+  border-radius: 1px; }
+  input[type=text]:focus, textarea:focus, input[type=email]:focus, input[type=password]:focus {
+    outline: none;
+    border: 1px solid #AAA;
+    box-shadow: inset 0 0 2px #CCC, 0 0 2px #CCC; }
+
+input[type=text] {
+  width: 225px;
+  height: 25px; }
+
+textarea {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-right: 5px;
+  resize: none; }
+
+label {
+  font-size: 14px;
+  margin-bottom: 5px;
+  color: #2c2c2c; }
+
+.field {
+  margin-bottom: 15px; }
+
+.divider {
+  width: 100%;
+  height: 1px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  border-bottom: 1px dotted #CCC;
+  border-top: 1px dotted #CCC; }
+
+.listtable {
+  width: 100%;
+  text-align: center;
+  border-collapse: collapse; }
+  .listtable #thead {
+    margin-bottom: 10px;
+    border-radius: 3px; }
+  .listtable th {
+    background-color: #2c2c2c;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: #FFF; }
+  .listtable td {
+    background-color: rgba(0, 0, 0, 0.01);
+    padding-top: 8px;
+    padding-bottom: 8px;
+    border-bottom: 1px dotted #CCC; }
+  .listtable a {
+    color: #31557b; }
+
+#login {
+  width: 280px;
+  padding: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 150px;
+  background-color: #FFF;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+  border-radius: 5px; }
+  #login img {
+    margin-left: 65px; }
+
+#user_email, #user_password {
+  width: 273px;
+  height: 25px;
+  margin-top: 10px; }
+
+#login-submit {
+  width: 280px;
+  height: 30px;
+  margin-top: 20px;
+  background: #4777b2;
+  /* Old browsers */
+  /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzQ3NzdiMiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMyYTQ1NmIiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+  background: -moz-linear-gradient(top, #4777b2 0%, #2a456b 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #4777b2), color-stop(100%, #2a456b));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #4777b2 0%, #2a456b 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #4777b2 0%, #2a456b 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #4777b2 0%, #2a456b 100%);
+  /* IE10+ */
+  background: linear-gradient(to bottom, #4777b2 0%, #2a456b 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#4777b2', endColorstr='#2a456b',GradientType=0 );
+  /* IE6-8 */
+  border: 1px solid #31557b;
+  color: #FFF;
+  border-radius: 2px;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.5); }
