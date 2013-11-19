@@ -5,11 +5,11 @@ class SubjectsController < ApplicationController
   # GET /subjects
   # GET /subjects.json
   def index
-    @search = Subject.search do
+   @search = Subject.search do
       fulltext params[:search]
-    end
+     end
     @subjects = @search.results
-  # @subjects = Subject.all
+    #@subjects = Subject.all
   end
 
   # GET /subjects/1
