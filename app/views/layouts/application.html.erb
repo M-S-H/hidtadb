@@ -8,10 +8,12 @@
 </head>
 <body>
 
+<% if user_signed_in? %>
 <header>
 	<div id="hwrap">
 		<%= image_tag 'logo.png', id: 'logo', width: '100px', height: '100px' %>
 		<h1>HIDTA New Mexico</h1>
+		<span><%= link_to 'Logout', '/users/sign_out', :method => :delete %></span>
 	</div>
 </header>
 
@@ -32,6 +34,10 @@
 		<%= yield %>
 	</div>
 </div>
+
+<% else %>
+	<%= yield %>
+<% end %>
 
 </body>
 </html>
