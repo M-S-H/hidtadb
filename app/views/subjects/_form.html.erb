@@ -11,68 +11,7 @@
 		</div>
 	<% end %>
 
-	<table width="100%">
-		<tr>
-			<td>
-				<div class="field">
-					<%= f.label :name %><br>
-					<%= f.text_field :name %>
-				</div>
-			</td>
-			<td>
-				<div class="field">
-					<%= f.label :dob %><br>
-					<%= f.date_select :dob %>
-				</div>
-			</td>
-			<td>
-				<div class="field">
-					<%= f.label :ssn, "SSN" %><br>
-					<%= f.text_field :ssn %>
-				</div>
-			</td>
-		</tr>
-		<tr>
-			<td>
-				<div class="field">
-					<%= f.label :oln, "OLN" %><br>
-					<%= f.text_field :oln %>
-				</div>
-			</td>
-			<td>
-				<div class="field">
-					<%= f.label :gender %><br>
-					<%= f.text_field :gender %>
-				</div>
-			</td>
-			<td>
-				<div class="field">
-					<%= f.label :address %><br>
-					<%= f.text_field :address %>
-				</div>
-			</td>
-		</tr>
-		<tr>
-			<td>
-				<div class="field">
-					<%= f.label :city %><br>
-					<%= f.text_field :city %>
-				</div>
-			</td>
-			<td>
-				<div class="field">
-					<%= f.label :state %><br>
-					<%= f.text_field :state %>
-				</div>
-			</td>
-			<td>
-				<div class="field">
-					<%= f.label :zip %><br>
-					<%= f.text_field :zip %>
-				</div>
-			</td>
-		</tr>
-	</table>
+	<%= render partial: 'fields', locals: {f: f} %>
 
 	<div class="field">
 		<%= f.label :passanger %><br>

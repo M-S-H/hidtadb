@@ -76,6 +76,106 @@
 		</tr>
 	</table>
 
+
+
+	<div class="divider"></div>
+	<h3>Siezures</h3>
+	<div class="add" id="drug-s">
+		<%= image_tag 'add.png', width: '15px', height: '15px' %>
+		<b>Add Drug Siezure</b>
+	</div>
+	<div class="add" id="weapon-s">
+		<%= image_tag 'add.png', width: '15px', height: '15px' %> 
+		<b>Add Weapon Siezure</b>
+	</div>
+	<div id="drug-fields"></div>
+	<div id="weapon-fields"></div>
+
+
+
+	<div class="divider"></div>
+	<h3>Location</h3>
+	<%= fields_for :location do |l| %>
+		<table width="100%">
+			<tr>
+				<td>
+					<div class="field">
+						<%= l.label :road %><br>
+						<%= l.text_field :road %>
+					</div>
+				</td>
+				<td>
+					<div class="field">
+						<%= l.label :mile_marker %><br>
+						<%= l.text_field :mile_marker %>
+					</div>
+				</td>
+				<td>
+					<div class="field">
+						<%= l.label :direction %><br>
+						<%= l.text_field :direction %>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<div class="field">
+						<%= l.label :address %><br>
+						<%= l.text_field :address %>
+					</div>
+				</td>
+				<td>
+					<div class="field">
+						<%= l.label :city %><br>
+						<%= l.text_field :city %>
+					</div>
+				</td>
+				<td>
+					<div class="field">
+						<%= l.label :county %><br>
+						<%= l.text_field :county %>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<div class="field">
+						<%= l.label :state %><br>
+						<%= l.text_field :state %>
+					</div>
+				</td>
+				<td>
+					<div class="field">
+						<%= l.label :zip %><br>
+						<%= l.text_field :zip %>
+					</div>
+				</td>
+			</tr>
+		</table>
+	<% end %>
+
+
+
+	<div class="divider"></div>
+	<h3>Subjects</h3>
+	<div class="add" id="sub">
+		<%= image_tag 'add.png', width: '15px', height: '15px' %>
+		<b>Add Subject</b>
+	</div>
+	<div id="subject-fields"></div>
+
+
+
+	<div class="divider"></div>
+	<h3>Vehicles</h3>
+	<div class="add" id="veh">
+		<%= image_tag 'add.png', width: '15px', height: '15px' %>
+		<b>Add Vehicle</b>
+	</div>
+	<div id="vehicle-fields"></div>
+
+
+
 	<div class="divider"></div>
 	<h3>Narrative</h3>
 

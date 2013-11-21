@@ -50,6 +50,7 @@ ActiveRecord::Schema.define(version: 20131121054912) do
     t.string   "currency"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "siezure_report_id"
   end
 
   create_table "dtos", force: true do |t|
@@ -70,6 +71,7 @@ ActiveRecord::Schema.define(version: 20131121054912) do
     t.string   "zip"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "siezure_report_id"
   end
 
   create_table "rfis", force: true do |t|
@@ -133,6 +135,16 @@ ActiveRecord::Schema.define(version: 20131121054912) do
     t.datetime "updated_at"
   end
 
+  create_table "siezures", force: true do |t|
+    t.string   "drug_type"
+    t.float    "amount"
+    t.float    "price"
+    t.string   "currency"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "siezure_report_id"
+  end
+
   create_table "subjects", force: true do |t|
     t.string   "name"
     t.date     "dob"
@@ -192,8 +204,8 @@ ActiveRecord::Schema.define(version: 20131121054912) do
   end
 
   create_table "weapons", force: true do |t|
-    t.integer  "seizure_report_id"
-    t.string   "type"
+    t.integer  "siezure_report_id"
+    t.string   "weapon_type"
     t.string   "caliber"
     t.string   "sn"
     t.datetime "created_at"
