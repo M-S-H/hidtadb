@@ -4,11 +4,27 @@ class SearchesController < ApplicationController
   # GET /searches
   # GET /searches.json
   def index
-    @searches = Search.all
+    @search = Subject.search do
+       fulltext params[:search]
+    end
+    @subjects = @search.results
     
-    @subjects = Subject.search {fulltext params[:search]}
-    @siezure_reports = SiezureReport.search {fulltext params[:search]}
-    @vehicles = Vehicle.search {fulltext params[:search]}
+    @search = SiezureReport.search do
+       fulltext params[:search]
+     end
+    @siezure_reports = @search.results
+    
+    @search = Vehicle.search do
+       fulltext params[:search]
+     end
+    @vehicles = @search.results
+    #@subjects = Subject.all
+    #@searches = Vehicle.search {fulltext params[:search]}
+    #@searches = Search.all
+    
+    #@subjects = Subject.search {fulltext params[:search]}
+    #@siezure_reports = SiezureReport.search {fulltext params[:search]}
+    #@vehicles = Vehicle.search {fulltext params[:search]}
   end
 
   # GET /searches/1
