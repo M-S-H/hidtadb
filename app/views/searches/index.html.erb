@@ -1,0 +1,100 @@
+<h1>Enter Your Search:</h1>
+
+<%= form_tag searches_path, :method => :get do %>
+  <p>
+    <%= text_field_tag :search, params[:search] %>
+    <%= submit_tag "Search", :name => nil %>
+<% end %></p>
+<table class="listtable">
+	<thead>
+		<tr>
+			<th>Case Number</th>
+			<th>Taskforce</th>
+			<th>Date</th>
+			<th>Edit</th>
+			<th>Delete</th>
+		</tr>
+	</thead>
+
+	<tbody>
+	   <% if @siezure_reports.count > 0 %>
+		 <% @siezure_reports.each do |siezure_report| %>
+			<tr>
+				<td><%= link_to siezure_report.casenum, siezure_report %></td>
+				<td><%= siezure_report.taskforce %></td>
+				<td><%= siezure_report.siezuredate %></td>
+				<td><%= link_to 'Edit', edit_siezure_report_path(siezure_report) %></td>
+				<td><%= link_to 'Destroy', siezure_report, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+			</tr>
+		  <% end %>
+	   <% else %>
+	     <td>No Siezure Reports Matched.</td>	 
+	   <% end %> 
+	</tbody>
+</table>
+
+<table class="listtable">
+	<thead>
+		<tr>
+			<th>Name</th>
+			<th>Dob</th>
+			<th>Ssn</th>
+			<th>State</th>
+			<th></th>
+			<th></th>
+		</tr>
+	</thead>
+
+	<tbody>
+		<% if @subjects.count > 0 %>
+		   <% @subjects.each do |subject| %>
+			  <tr>
+				  <td><%= link_to subject.name, subject %></td>
+				  <td><%= subject.dob %></td>
+				  <td><%= subject.ssn %></td>
+				  <td><%= subject.state %></td>
+				  <td><%= link_to 'Edit', edit_subject_path(subject) %></td>
+				  <td><%= link_to 'Destroy', subject, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+			  </tr>
+		  <% end %>
+	   <% else %>
+	     <td>No Subjects Matched.</td>	 
+	   <% end %> 
+	</tbody>
+</table>
+
+<table class="listtable">
+	<thead>
+		<tr>
+			<th>Plate</th>
+			<th>Model</th>
+			<th>Year</th>
+			<th>State</th>
+			<th>Owner</th>
+			<th></th>
+			<th></th>
+		</tr>
+	</thead>
+
+	<tbody>
+	    <% if @subjects.count > 0 %>
+		  <% @vehicles.each do |vehicle| %>
+			  <tr>
+				  <td><%= link_to vehicle.plate, vehicle %></td>
+				  <td><%= vehicle.model %></td>
+				  <td><%= vehicle.year %></td>
+				  <td><%= vehicle.state %></td>
+				  <td><%= vehicle.owner %></td>
+				  <td><%= link_to 'Edit', edit_vehicle_path(vehicle) %></td>
+				  <td><%= link_to 'Destroy', vehicle, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+			  </tr>
+		  <% end %>
+		<% else %>
+		  <td>No Vehicles Matched.</td>
+		<% end %>  
+	</tbody>
+</table>
+
+<br>
+
+

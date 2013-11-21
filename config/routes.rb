@@ -12,6 +12,8 @@ HIDTA::Application.routes.draw do
 	resources :subjects
 
 	resources :siezure_reports
+	
+	resources :searches
 
 	get 'add_fields/:type/:num', to: 'siezure_reports#add_fields'
 
