@@ -4,8 +4,11 @@ class SiezureReportsController < ApplicationController
 	# GET /siezure_reports
 	# GET /siezure_reports.json
 	def index
-		@siezure_reports = SiezureReport.all
-	end
+    @search = SiezureReport.search do
+      fulltext params[:search]
+     end
+    @siezure_reports = @search.results
+  end
 
 	# GET /siezure_reports/1
 	# GET /siezure_reports/1.json

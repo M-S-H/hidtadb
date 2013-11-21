@@ -11,11 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema.define(version: 20131121045649) do
-=======
 ActiveRecord::Schema.define(version: 20131121054912) do
->>>>>>> bf452825e798d51650be4643fcbb540c42728466
 
   create_table "addresses", force: true do |t|
     t.integer  "address_id"
@@ -137,6 +133,16 @@ ActiveRecord::Schema.define(version: 20131121054912) do
     t.string   "pocphone"
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "siezures", force: true do |t|
+    t.string   "drug_type"
+    t.float    "amount"
+    t.float    "price"
+    t.string   "currency"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "siezure_report_id"
   end
 
   create_table "subjects", force: true do |t|
