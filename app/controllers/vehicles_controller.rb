@@ -3,8 +3,15 @@ class VehiclesController < ApplicationController
 
   # GET /vehicles
   # GET /vehicles.json
+  #def index
+  #  @vehicles = Vehicle.all
+  #end
+  
   def index
-    @vehicles = Vehicle.all
+   @search = Vehicle.search do
+      fulltext params[:search]
+     end
+    @vehicles = @search.results
   end
 
   # GET /vehicles/1
