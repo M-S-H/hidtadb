@@ -14,10 +14,10 @@ development:
     log_level: INFO
     path: /solr/development
 
-
 test:
   solr:
     hostname: localhost
     port: 8981
     log_level: WARNING
-    path: /solr/teste
+    path: /solr/test
+    

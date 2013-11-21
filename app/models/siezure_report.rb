@@ -16,7 +16,6 @@ class SiezureReport < ActiveRecord::Base
         time :siezuretime
         text :siezuretype
         boolean :hheop
-        text :country
         text :narrative
         boolean :analytical
         text :concealment_method
