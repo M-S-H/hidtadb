@@ -16,7 +16,7 @@ class SiezureReport < ActiveRecord::Base
     boolean :analytical
     text :concealment_method
     boolean :false_compartment
-    text :compartment_locaiton
+    text :compartment_location
     text :cargo_state_type
     boolean :k9used
     text :lab_stash_house

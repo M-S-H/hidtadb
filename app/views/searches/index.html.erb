@@ -1,0 +1,23 @@
+<h1>Enter Your Search:</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+  <%= form_tag searches_path, :method => :get do %>
+  <p>
+    <%= text_field_tag :search, params[:search] %>
+    <%= submit_tag "Search", :name => nil %>
+  <% end %></p>
+  </tbody>
+</table>
+
+<br>
+
+
