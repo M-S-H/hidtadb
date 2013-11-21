@@ -1,0 +1,27 @@
+<div class="addition">
+	<%= fields_for "weapons[#{@number}]" do |f| %>
+
+		<table width="100%">
+			<tr>
+				<td>
+					<div class="field">
+						<%= f.label :weapon_type, 'Weapon Type' %><br>
+						<%= f.text_field :weapon_type %>
+					</div>
+				</td>
+				<td>
+					<div class="field">
+						<%= f.label :caliber, 'Caliber' %><br>
+						<%= f.text_field :caliber %>
+					</div>
+				</td>
+				<td>
+					<div class="field">
+						<%= f.label :sn, 'SN' %><br>
+						<%= f.text_field :sn %>
+					</div>
+				</td>
+			</tr>
+		</table>
+	<% end %>
+</div>

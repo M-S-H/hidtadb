@@ -1,0 +1,5 @@
+<div class="addition">
+	<%= fields_for "subjects[#{@number}]" do |f| %>
+		<%= render partial: '/subjects/fields', locals: {f: f} %>
+	<% end %>
+</div>

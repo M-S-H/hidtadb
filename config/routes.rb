@@ -1,9 +1,9 @@
 HIDTA::Application.routes.draw do
 
-  devise_for :users
-  resources :audits
+	devise_for :users
+	resources :audits
 
-  resources :locations
+	resources :locations
 
 	root 'siezure_reports#index'
 
@@ -12,6 +12,8 @@ HIDTA::Application.routes.draw do
 	resources :subjects
 
 	resources :siezure_reports
+
+	get 'add_fields/:type/:num', to: 'siezure_reports#add_fields'
 
 	# The priority is based upon order of creation: first created -> highest priority.
 	# See how all your routes lay out with "rake routes".

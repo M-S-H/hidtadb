@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131117220755) do
+ActiveRecord::Schema.define(version: 20131121045649) do
 
   create_table "addresses", force: true do |t|
     t.integer  "address_id"
@@ -50,6 +50,7 @@ ActiveRecord::Schema.define(version: 20131117220755) do
     t.string   "currency"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "siezure_report_id"
   end
 
   create_table "dtos", force: true do |t|
@@ -70,6 +71,7 @@ ActiveRecord::Schema.define(version: 20131117220755) do
     t.string   "zip"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "siezure_report_id"
   end
 
   create_table "rfis", force: true do |t|
@@ -197,8 +199,8 @@ ActiveRecord::Schema.define(version: 20131117220755) do
   end
 
   create_table "weapons", force: true do |t|
-    t.integer  "seizure_report_id"
-    t.string   "type"
+    t.integer  "siezure_report_id"
+    t.string   "weapon_type"
     t.string   "caliber"
     t.string   "sn"
     t.datetime "created_at"

@@ -1,0 +1,38 @@
+<div class="addition">
+	<%= fields_for "drugs[#{@number}]" do |f| %>
+		
+		<b>Drug Type:</b>
+		<%= radio_button_tag :type_of_drug, :One %>
+		<%= f.label :type_of_drug, :One %>
+		<%= radio_button_tag :type_of_drug, :Two %>
+		<%= f.label :type_of_drug, :Two %>
+		<%= radio_button_tag :type_of_drug, :Three %>
+		<%= f.label :type_of_drug, :Three %>
+		<%= radio_button_tag :type_of_drug, :Other %>
+		<%= f.label :type_of_drug, 'Other:' %>
+		<%= f.text_field :othertype %>
+
+		<table width="100%">
+			<tr>
+				<td>
+					<div class="field">
+						<%= f.label :amount, 'Amount' %><br>
+						<%= f.text_field :amount %>
+					</div>
+				</td>
+				<td>
+					<div class="field">
+						<%= f.label :purchase_price, 'Purchase Price' %><br>
+						<%= f.text_field :purchase_price %>
+					</div>
+				</td>
+				<td>
+					<div class="field">
+						<%= f.label :currency, 'Currency' %><br>
+						<%= f.text_field :currency %>
+					</div>
+				</td>
+			</tr>
+		</table>
+	<% end %>
+</div>
