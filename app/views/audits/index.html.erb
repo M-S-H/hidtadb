@@ -1,35 +1,27 @@
 <h1>Listing audits</h1>
 
 <table>
-  <thead>
-    <tr>
-      <th>User</th>
-      <th>Action</th>
-      <th>Time</th>
-      <th>Date</th>
-      <th>Record</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
+	<thead>
+		<tr>
+			<th>User</th>
+			<th>Action</th>
+			<th>Record Type</th>
+			<th>Record</th>
+			<th>Date/Time</th>
+		</tr>
+	</thead>
 
-  <tbody>
-    <% @audits.each do |audit| %>
-      <tr>
-        <td><%= audit.user_id %></td>
-        <td><%= audit.action %></td>
-        <td><%= audit.time %></td>
-        <td><%= audit.date %></td>
-        <td><%= audit.record_id %></td>
-        <td><%= link_to 'Show', audit %></td>
-        <td><%= link_to 'Edit', edit_audit_path(audit) %></td>
-        <td><%= link_to 'Destroy', audit, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
+	<tbody>
+		<% @audits.each do |audit| %>
+			<tr>
+				<td><%= audit.user.fname %></td>
+				<td><%= audit.action %></td>
+				<td><%= audit.recordtype %></td>
+				<td><%= audit.record_id %></td>
+				<td><%= audit.created_at.to_time %></td>
+			</tr>
+		<% end %>
+	</tbody>
 </table>
 
 <br>
-
-<%= link_to 'New Audit', new_audit_path %>

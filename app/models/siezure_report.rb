@@ -5,6 +5,8 @@ class SiezureReport < ActiveRecord::Base
 	has_many :vehicles
 	has_many :drugs
 	has_many :weapons
+
+    validates :taskforce, presence: true
 	
 	 searchable do
         text :taskforce

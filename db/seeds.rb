@@ -11,10 +11,17 @@ SiezureReport.delete_all
 Drug.delete_all
 Subject.delete_all
 Vehicle.delete_all
+Audit.delete_all
 
-admin = User.create({email: 'admin@admin.com', password: 'password'})
 
-puts "Created User\nemail: #{admin.email}\tpassword: #{admin.password}\n"
+users = [
+	User.create({email: 'admin@hidta.com', password: 'password', fname: 'Agent', lname: 'Smith', role: 'admin'}),
+	User.create({email: 'field@hidta.com', password: 'password', fname: 'Burt', lname: 'Macklin', role: 'field'}),
+	User.create({email: 'entry@hidta.com', password: 'password', fname: 'Michael', lname: 'Scott', role: 'entry'})]
+
+users.each do |u|
+	puts "\nCreated User\nemail: #{u.email}\tpassword: #{u.password}\nrole: #{u.role}\n"
+end
 
 SiezureReport.create({taskforce: 'Jump Street Squad', agency: 'The Justice League', casenum: '1'})
 
