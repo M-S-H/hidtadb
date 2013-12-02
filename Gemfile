@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 gem 'sunspot_rails'
 
-gem 'sunspot_solr'
+gem 'sunspot_solr', '~> 2.1.0'
 
 #gem 'client_side_validations'
 
