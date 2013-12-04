@@ -6,18 +6,18 @@
     <%= submit_tag "Search", :name => nil %>
 <% end %></p>
 <table class="listtable">
-	<thead>
+  <% if @siezure_reports.count > 0 %>
+  	<thead>
 		<tr>
 			<th>Case Number</th>
-			<th>Taskforce</th>
-			<th>Date</th>
-			<th>Edit</th>
+	  		<th>Taskforce</th>
+	  		<th>Date</th>
+	  		<th>Edit</th>
 			<th>Delete</th>
 		</tr>
 	</thead>
 
 	<tbody>
-	   <% if @siezure_reports.count > 0 %>
 		 <% @siezure_reports.each do |siezure_report| %>
 			<tr>
 				<td><%= link_to siezure_report.casenum, siezure_report %></td>
@@ -27,14 +27,19 @@
 				<td><%= link_to 'Destroy', siezure_report, method: :delete, data: { confirm: 'Are you sure?' } %></td>
 			</tr>
 		  <% end %>
-	   <% else %>
-	     <td>No Seizure Reports Matched.</td>	 
-	   <% end %> 
-	</tbody>
+    </tbody>
+  <% else %>
+  	<thead>
+	   <tr><th>No Seizure Reports Matched.</th></tr>	 
+    </thead>
+  <% end %>
 </table>
 
+<br> <!-- provide a little space between results -->
+
 <table class="listtable">
-	<thead>
+	<% if @subjects.count > 0 %>
+	  <thead>
 		<tr>
 			<th>Name</th>
 			<th>Dob</th>
@@ -43,43 +48,46 @@
 			<th></th>
 			<th></th>
 		</tr>
-	</thead>
+	  </thead>
 
-	<tbody>
-		<% if @subjects.count > 0 %>
-		   <% @subjects.each do |subject| %>
-			  <tr>
-				  <td><%= link_to subject.name, subject %></td>
-				  <td><%= subject.dob %></td>
-				  <td><%= subject.ssn %></td>
-				  <td><%= subject.state %></td>
-				  <td><%= link_to 'Edit', edit_subject_path(subject) %></td>
-				  <td><%= link_to 'Destroy', subject, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-			  </tr>
-		  <% end %>
-	   <% else %>
-	     <td>No Subjects Matched.</td>	 
-	   <% end %> 
+	  <tbody>
+		 <% @subjects.each do |subject| %>
+	       <tr>
+	         <td><%= link_to subject.name, subject %></td>
+             <td><%= subject.dob %></td>
+		     <td><%= subject.ssn %></td>
+		     <td><%= subject.state %></td>
+		     <td><%= link_to 'Edit', edit_subject_path(subject) %></td>
+		     <td><%= link_to 'Destroy', subject, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+		  </tr>	  
+		<% end %>
 	</tbody>
+    <% else %>
+      <thead>
+	    <tr><th>No Subjects Matched.</th></tr>	 
+	  </thead>
+    <% end %> 
 </table>
 
-<table class="listtable">
-	<thead>
-		<tr>
-			<th>Plate</th>
-			<th>Model</th>
-			<th>Year</th>
-			<th>State</th>
-			<th>Owner</th>
-			<th></th>
-			<th></th>
-		</tr>
-	</thead>
+<br> <!-- provide a little space between results -->
 
-	<tbody>
-	    <% if @subjects.count > 0 %>
-		  <% @vehicles.each do |vehicle| %>
-			  <tr>
+<table class="listtable">
+	<% if @subjects.count > 0 %>
+		<thead>
+			<tr>
+				<th>Plate</th>
+				<th>Model</th>
+				<th>Year</th>
+				<th>State</th>
+				<th>Owner</th>
+				<th></th>
+				<th></th>
+			</tr>
+		</thead>
+
+		<tbody>
+	   		<% @vehicles.each do |vehicle| %>
+				<tr>
 				  <td><%= link_to vehicle.plate, vehicle %></td>
 				  <td><%= vehicle.model %></td>
 				  <td><%= vehicle.year %></td>
@@ -87,12 +95,14 @@
 				  <td><%= vehicle.owner %></td>
 				  <td><%= link_to 'Edit', edit_vehicle_path(vehicle) %></td>
 				  <td><%= link_to 'Destroy', vehicle, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-			  </tr>
-		  <% end %>
-		<% else %>
-		  <td>No Vehicles Matched.</td>
-		<% end %>  
-	</tbody>
+			  	</tr>
+		  	<% end %>
+		<tbody>
+	<% else %>
+		<thead>	  
+		  <tr><th>No Vehicles Matched.</th></tr>
+		</thead>
+    <% end %> 
 </table>
 
 <br>
