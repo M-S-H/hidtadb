@@ -11,9 +11,11 @@
 <% if user_signed_in? %>
 <header>
 	<div id="hwrap">
-		<%= image_tag 'logo.png', id: 'logo', width: '100px', height: '100px' %>
-		<h1>HIDTA New Mexico</h1>
-		<span><%= link_to 'Logout', '/users/sign_out', :method => :delete %></span>
+		<tr></tr>
+		  <td><%= image_tag 'logo.png', id: 'logo', width: '100px', height: '100px' %></td>
+		  <td><h1>HIDTA New Mexico</h1></td>
+		  <td><button type="button" class="btn btn-primary"><%= link_to 'Logout', '/users/sign_out', :method => :delete %></button></td>
+		</tr>
 	</div>
 </header>
 
