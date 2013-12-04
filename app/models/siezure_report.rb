@@ -7,7 +7,8 @@ class SiezureReport < ActiveRecord::Base
 	has_many :weapons
 
     validates :taskforce, presence: true
-	
+	validates :casenum, presence: true
+    validates :agency, presence: true
 	 searchable do
         text :taskforce
         text :agency

@@ -20,5 +20,8 @@ class Subject < ActiveRecord::Base
   end
 
   validates :name, presence: true
-  validates :ssn, numericality: { only_integer: true }
+  validates :ssn, numericality: { only_integer: true, greater_than: 0 }
+  validates :zip, numericality: { only_integer: true, greater_than: 0 }
+  validates :citizenship, presence: true
+
 end

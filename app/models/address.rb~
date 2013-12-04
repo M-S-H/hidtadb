@@ -5,7 +5,10 @@ class Address < ActiveRecord::Base
     text  :street_name
     text  :city
     integer :zip
-    datetime :created_at
-    datetime :updated_at
   end
+
+  validates :address_id, numericality: { greater_than: 0 }
+  validates :street_name, numericality: { greater_than: 0 }
+  validates :zip, numericality: { greater_than: 0 }
+
 end

@@ -14,4 +14,8 @@ class Vehicle < ActiveRecord::Base
     time :updated_at
 
   end
+
+  validates :year numericality: { only_integer: true }
+  validates :plate numericatlity: {only_integer: true }
+
 end
