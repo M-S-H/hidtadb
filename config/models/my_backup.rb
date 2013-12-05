@@ -3,8 +3,8 @@
 ##
 # Backup Generated: my_backup
 # Once configured, you can run the backup with the following command:
-#
-# $ backup perform -t my_backup [-c <path_to_configuration_file>]
+#!!!!!!!!!
+# $ backup perform -t my_backup -c config/models/my_backup.rb
 #
 Model.new(:my_backup, 'Routine Back up of database') do
   ##
