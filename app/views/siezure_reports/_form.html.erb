@@ -30,7 +30,7 @@
 			<td>
 				<div class="field">
 					<%= f.label :casenum, 'Case Number' %><br>
-					<%= f.text_field :casenum %>
+					<%= f.text_field :casenum, :digits => true %>
 				</div>
 			</td>
 		</tr>
@@ -44,7 +44,7 @@
 			<td>
 				<div class="field">
 					<%= f.label :initiative, 'Initiative' %><br>
-					<%= f.text_field :initiative %>
+					<%= f.text_field :initiative, :placeholder => 'Initiative' %>
 				</div>
 			</td>
 			<td>
@@ -64,7 +64,7 @@
 			<td>
 				<div class="field">
 					<%= f.label :siezuretype, 'Type of Seizure' %><br>
-					<%= f.text_field :siezuretype %>
+					<%= f.text_field :siezuretype , :placeholder => 'Seizure Type'%>
 				</div>
 			</td>
 			<td>
@@ -127,7 +127,7 @@
 				<td>
 					<div class="field">
 						<%= l.label :city %><br>
-						<%= l.text_field :city %>
+						<%= l.text_field :city, :textonly => true %>
 					</div>
 				</td>
 				<td>

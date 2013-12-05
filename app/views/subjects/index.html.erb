@@ -18,7 +18,7 @@
 			<th>Ssn</th>
 			<th>State</th>
 			<% if !current_user.field? %>
-				<th>Edit</th>
+				<th>Update</th>
 			<% end %>
 		</tr>
 	</thead>
@@ -31,7 +31,7 @@
 				<td><%= subject.ssn %></td>
 				<td><%= subject.state %></td>
 				<% if !current_user.field? %>
-					<td><%= link_to 'Edit', edit_subject_path(subject) %></td>
+					<td><%= link_to 'Update', edit_subject_path(subject) %></td>
 				<% end %>
 			</tr>
 		<% end %>

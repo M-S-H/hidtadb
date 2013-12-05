@@ -59,7 +59,7 @@ class SiezureReportsController < ApplicationController
 		#Create Subjects
 		if params[:subjects]
 			params[:subjects].keys.each do |k|
-				s = @siezure_report.subjects.new params.require(:subjects).require(k).permit(:name, :dob, :ssn, :oln, :gender, :address, :city, :state, :zip, :passanger, :misc, :citizenship, :siezure_report_id)
+				s = @siezure_report.subjects.new params.require(:subjects).require(k).permit(:name, :dob, :ssn, :oln, :gender, :address, :city, :state, :zip, :passenger, :misc, :citizenship, :siezure_report_id)
 				subjects << s
 			end
 		end

@@ -12,7 +12,7 @@
 			<th>Taskforce</th>
 			<th>Date</th>
 			<% if !current_user.field? %>
-				<th>Edit</th>
+				<th>Update</th>
 			<% end %>
 		</tr>
 	</thead>
@@ -24,7 +24,7 @@
 				<td><%= siezure_report.taskforce %></td>
 				<td><%= siezure_report.siezuredate %></td>
 				<% if !current_user.field? %>
-					<td><%= link_to 'Edit', edit_siezure_report_path(siezure_report) %></td>
+					<td><%= link_to 'Update', edit_siezure_report_path(siezure_report) %></td>
 				<% end %>
 			</tr>
 		<% end %>

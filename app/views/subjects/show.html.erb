@@ -46,8 +46,8 @@
 </p>
 
 <p>
-  <strong>Passanger:</strong>
-  <%= @subject.passanger %>
+  <strong>Passenger:</strong>
+  <%= @subject.passenger %>
 </p>
 
 <p>
@@ -66,5 +66,5 @@
 </p>
 
 <% if !current_user.field? %>
-  <%= link_to 'Edit', edit_subject_path(@subject) %>
+  <%= link_to 'Update', edit_subject_path(@subject) %>
 <% end %>

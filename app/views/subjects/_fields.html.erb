@@ -4,7 +4,6 @@
 			<div class="field">
 				<%= f.label :name, "Name" %><br>
 				<%= f.text_field :name, :required => true, :minlength => 2, :placeholder => 'Name' %>
-				<!-- <%= f.text_field :name, :required => true, :digits => false, :placeholder => 'Name' %> -->
 			</div>
 		</td>
 		<td>
@@ -16,7 +15,7 @@
 		<td>
 			<div class="field">
 				<%= f.label :ssn, "SSN" %><br>
-				<%= f.text_field :ssn , :minlength => 9, :required => false, :placeholder => '9-Digit SSN' %>
+				<%= f.text_field :ssn , :minlength => 9, :digits => true, :required => false, :placeholder => '9-Digit SSN' %>
 			</div>
 		</td>
 	</tr>
@@ -30,7 +29,7 @@
 		<td>
 			<div class="field">
 				<%= f.label :gender %><br>
-				<%= f.text_field :gender %>
+				<%= f.text_field :gender , :required => true, :textonly => true , :placeholder => 'M, F, or Other'%>
 			</div>
 		</td>
 		<td>
@@ -44,19 +43,19 @@
 		<td>
 			<div class="field">
 				<%= f.label :city %><br>
-				<%= f.text_field :city %>
+				<%= f.text_field :city, :textonly => true , :placeholder => 'City'%>
 			</div>
 		</td>
 		<td>
 			<div class="field">
 				<%= f.label :state %><br>
-				<%= f.text_field :state %>
+				<%= f.text_field :state, :required => true, :textonly => true, :placeholder => 'State'%>
 			</div>
 		</td>
 		<td>
 			<div class="field">
 				<%= f.label :zip %><br>
-				<%= f.text_field :zip %>
+				<%= f.text_field :zip, :digits => true, :minlength => 5, :placeholder => 'Zip'%>
 			</div>
 		</td>
 	</tr>

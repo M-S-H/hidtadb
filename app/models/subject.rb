@@ -10,7 +10,7 @@ class Subject < ActiveRecord::Base
     text :city
     text :state
     text :zip
-    boolean :passanger
+    boolean :passenger
     text :misc
     text :citizenship
     integer :siezure_report_id
