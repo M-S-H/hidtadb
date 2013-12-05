@@ -65,5 +65,6 @@
   <%= @subject.siezure_report_id %>
 </p>
 
-<%= link_to 'Edit', edit_subject_path(@subject) %> |
-<%= link_to 'Back', subjects_path %>
+<% if !current_user.field? %>
+  <%= link_to 'Edit', edit_subject_path(@subject) %>
+<% end %>

@@ -95,5 +95,6 @@
   <%= @siezure_report.pocphone %>
 </p>
 
-<%= link_to 'Edit', edit_siezure_report_path(@siezure_report) %> |
-<%= link_to 'Back', siezure_reports_path %>
+<% if !current_user.field? %>
+  <%= link_to 'Edit', edit_siezure_report_path(@siezure_report) %>
+<% end %>

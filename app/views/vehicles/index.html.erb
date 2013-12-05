@@ -13,8 +13,9 @@
 			<th>Year</th>
 			<th>State</th>
 			<th>Owner</th>
-			<th></th>
-			<th></th>
+			<% if !current_user.field? %>
+				<th>Edit</th>
+			<% end %>
 		</tr>
 	</thead>
 
@@ -26,8 +27,9 @@
 				<td><%= vehicle.year %></td>
 				<td><%= vehicle.state %></td>
 				<td><%= vehicle.owner %></td>
-				<td><%= link_to 'Edit', edit_vehicle_path(vehicle) %></td>
-				<td><%= link_to 'Destroy', vehicle, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+				<% if !current_user.field? %>
+					<td><%= link_to 'Edit', edit_vehicle_path(vehicle) %></td>
+				<% end %>
 			</tr>
 		<% end %>
 	</tbody>
@@ -35,4 +37,6 @@
 
 <br>
 
-<%= link_to 'New Vehicle', new_vehicle_path %>
+<% if !current_user.field? %>
+	<%= link_to 'New Vehicle', new_vehicle_path %>
+<% end %>

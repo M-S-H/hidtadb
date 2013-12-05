@@ -11,8 +11,9 @@
 			<th>Case Number</th>
 			<th>Taskforce</th>
 			<th>Date</th>
-			<th>Edit</th>
-			<th>Delete</th>
+			<% if !current_user.field? %>
+				<th>Edit</th>
+			<% end %>
 		</tr>
 	</thead>
 
@@ -22,8 +23,9 @@
 				<td><%= link_to siezure_report.casenum, siezure_report %></td>
 				<td><%= siezure_report.taskforce %></td>
 				<td><%= siezure_report.siezuredate %></td>
-				<td><%= link_to 'Edit', edit_siezure_report_path(siezure_report) %></td>
-				<td><%= link_to 'Destroy', siezure_report, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+				<% if !current_user.field? %>
+					<td><%= link_to 'Edit', edit_siezure_report_path(siezure_report) %></td>
+				<% end %>
 			</tr>
 		<% end %>
 	</tbody>
@@ -31,4 +33,6 @@
 
 <br>
 
-<%= link_to 'New Seizure report', new_siezure_report_path %>
+<% if !current_user.field? %>
+	<%= link_to 'New Seizure report', new_siezure_report_path %>
+<% end %>

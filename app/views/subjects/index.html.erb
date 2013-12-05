@@ -17,8 +17,9 @@
 			<th>Dob</th>
 			<th>Ssn</th>
 			<th>State</th>
-			<th></th>
-			<th></th>
+			<% if !current_user.field? %>
+				<th>Edit</th>
+			<% end %>
 		</tr>
 	</thead>
 
@@ -29,8 +30,9 @@
 				<td><%= subject.dob %></td>
 				<td><%= subject.ssn %></td>
 				<td><%= subject.state %></td>
-				<td><%= link_to 'Edit', edit_subject_path(subject) %></td>
-				<td><%= link_to 'Destroy', subject, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+				<% if !current_user.field? %>
+					<td><%= link_to 'Edit', edit_subject_path(subject) %></td>
+				<% end %>
 			</tr>
 		<% end %>
 	</tbody>
@@ -38,4 +40,6 @@
 
 <br>
 
-<%= link_to 'New Subject', new_subject_path %>
+<% if !current_user.field? %>
+	<%= link_to 'New Subject', new_subject_path %>
+<% end %>
