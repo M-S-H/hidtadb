@@ -1,6 +1,10 @@
 source 'https://rubygems.org'
 
+gem 'jquery-validation-rails'
+
 gem 'twitter-bootstrap-rails'
+
+gem 'progress_bar'
 
 gem "therubyracer"
 
@@ -9,8 +13,6 @@ gem "less-rails"
 gem 'sunspot_rails'
 
 gem 'sunspot_solr', '~> 2.1.0'
-
-#gem 'client_side_validations'
 
 gem 'rails', '4.0.0'
 

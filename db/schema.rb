@@ -11,7 +11,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131126165441) do
+ActiveRecord::Schema.define(version: 20131205045201) do
+
+  create_table "Subjects", force: true do |t|
+    t.string   "name"
+    t.date     "dob"
+    t.string   "ssn"
+    t.string   "oln"
+    t.string   "gender"
+    t.string   "address"
+    t.string   "city"
+    t.string   "state"
+    t.string   "zip"
+    t.boolean  "passenger"
+    t.text     "misc"
+    t.string   "citizenship"
+    t.integer  "siezure_report_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "addresses", force: true do |t|
     t.integer  "address_id"
@@ -131,24 +149,6 @@ ActiveRecord::Schema.define(version: 20131126165441) do
     t.string   "lab_stash_house"
     t.string   "poc"
     t.string   "pocphone"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "subjects", force: true do |t|
-    t.string   "name"
-    t.date     "dob"
-    t.string   "ssn"
-    t.string   "oln"
-    t.string   "gender"
-    t.string   "address"
-    t.string   "city"
-    t.string   "state"
-    t.string   "zip"
-    t.boolean  "passanger"
-    t.text     "misc"
-    t.string   "citizenship"
-    t.integer  "siezure_report_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

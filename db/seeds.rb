@@ -33,20 +33,6 @@ SiezureReport.create({taskforce: 'The A team', agency: 'The Justice League', cas
 
 SiezureReport.create({taskforce: 'Brooklyn Busters', agency: 'The Avengers', casenum: '357'})
 
-Drug.create({type_of_drug: 'Happy Powder', amount: '23' , purchase_price: '100' , currency: 'money' , siezure_report_id: '1'})
-
-Drug.create({type_of_drug: 'Cocaine', amount: '23' , purchase_price: '100' , currency: 'cash' , siezure_report_id: '2'})
-
-Drug.create({type_of_drug: 'Soda', amount: '3' , purchase_price: '100' , currency: 'beads' , siezure_report_id: '3'})
-
-Drug.create({type_of_drug: 'Coke', amount: '2' , purchase_price: '100' , currency: 'money' , siezure_report_id: '4'})
-
-Drug.create({type_of_drug: 'Pepsi', amount: '357' , purchase_price: '100' , currency: 'money' , siezure_report_id: '5'})
-
-Drug.create({type_of_drug: 'Heroine', amount: '847' , purchase_price: '100' , currency: 'Euros' , siezure_report_id: '1'})
-
-Drug.create({type_of_drug: 'Adrenochrome', amount: '234' , purchase_price: '100' , currency: 'Pesos' , siezure_report_id: '1'})
-
 Subject.create({name: 'Chewy Baca', ssn: '555' , gender: 'male' , city: 'Tattoine' , siezure_report_id: '1'})
 
 Subject.create({name: 'Han Solo', ssn: '505' , gender: 'male' , city: 'Tattoine' , siezure_report_id: '1'})
@@ -64,3 +50,17 @@ Subject.create({name: 'Larry', ssn: '007' , gender: 'male' , city: 'Garyville' ,
 Subject.create({name: 'Barry', ssn: '123' , gender: 'male' , city: 'Garyville' , siezure_report_id: '5'})
 
 Vehicle.create({make: 'Millenium', model: 'falcon', year: '12', color: 'Silver', siezure_report_id: '1'})
+
+Drug.create({type_of_drug: 'Happy Powder', amount: '23' , purchase_price: '100' , currency: 'money' , siezure_report_id: '1'})
+
+Drug.create({type_of_drug: 'Cocaine', amount: '23' , purchase_price: '100' , currency: 'cash' , siezure_report_id: '2'})
+
+Drug.create({type_of_drug: 'Soda', amount: '3' , purchase_price: '100' , currency: 'beads' , siezure_report_id: '3'})
+
+Drug.create({type_of_drug: 'Coke', amount: '2' , purchase_price: '100' , currency: 'money' , siezure_report_id: '4'})
+
+Drug.create({type_of_drug: 'Pepsi', amount: '357' , purchase_price: '100' , currency: 'money' , siezure_report_id: '5'})
+
+Drug.create({type_of_drug: 'Heroine', amount: '847' , purchase_price: '100' , currency: 'Euros' , siezure_report_id: '1'})
+
+Drug.create({type_of_drug: 'Adrenochrome', amount: '234' , purchase_price: '100' , currency: 'Pesos' , siezure_report_id: '1'})

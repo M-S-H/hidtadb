@@ -12,6 +12,10 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require additional-methods.js
+//= require additional-methods.min.js
+//= require jquery.validate.js
+//= require jquery.validate.min.js
 //= require twitter/bootstrap
 //= require_tree .
 //= require bootstrap-affix.js
@@ -28,10 +32,50 @@
 //= require bootstrap-transition.js
 //= require bootstrap-typeahead.js
 
+
 $(function () {
   $('.popover-test').popover({ 
     html : true,
     title: "This is a test",
     content: "<b>hello popover world</b>"
-  }).popover('show');
+  });
 });
+
+// validate signup form on keyup and submit
+/*$(function () {
+	$("#new_subject").validate({
+		rules: {
+			subject_name: {
+				required: true,
+				minlength: 2
+			},
+			subject_ssn: {
+				digits: true,
+				minlength: 9
+			},
+			subject_gender: {
+				required: true,
+				digits: false
+			},
+			subject_zip: {
+				digits: true,
+				minlength: 5
+			}
+	});
+});*/
+/*$( document ).ready(function() 
+{
+	// validate subject form on keyup and submit
+	$("#new_subject").validate({
+		rules: {
+			name: {
+				required: true,
+				minlength: 2
+			},
+			ssn: {
+				required: true,
+				minlength: 9
+			}
+		}
+	});
+}*/

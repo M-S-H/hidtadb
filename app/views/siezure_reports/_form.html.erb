@@ -50,7 +50,7 @@
 			<td>
 				<div class="field">
 					<%= f.label :siezuredate, 'Date of Seizure' %><br>
-					<%= f.date_select :siezuredate %>
+					<%= f.date_select :siezuredate, {:prompt => { :day => 'Select Day', :month => 'Select Month', :year => 'Select Year' }}, {:class => 'date-select'}  %>
 				</div>
 			</td>
 		</tr>
@@ -58,7 +58,7 @@
 			<td>
 				<div class="field">
 					<%= f.label :siezuretime, 'Time of Seizure' %><br>
-					<%= f.time_select :siezuretime %>
+					<%= f.time_select :siezuretime, {:prompt => { :hour => 'Select Hour', :minute => 'Select Minute'}}, {:class => 'time-select'}  %>
 				</div>
 			</td>
 			<td>
