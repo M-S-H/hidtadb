@@ -33,7 +33,7 @@ group :doc do
 end
 
 group :development do 
-	gem 'sqlite3'
+	gem 'pg'
 end
 
 group :production do 
