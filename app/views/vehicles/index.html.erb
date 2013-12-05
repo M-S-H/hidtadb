@@ -14,7 +14,7 @@
 			<th>State</th>
 			<th>Owner</th>
 			<% if !current_user.field? %>
-				<th>Edit</th>
+				<th>Update</th>
 			<% end %>
 		</tr>
 	</thead>
@@ -28,7 +28,7 @@
 				<td><%= vehicle.state %></td>
 				<td><%= vehicle.owner %></td>
 				<% if !current_user.field? %>
-					<td><%= link_to 'Edit', edit_vehicle_path(vehicle) %></td>
+					<td><%= link_to 'Update', edit_vehicle_path(vehicle) %></td>
 				<% end %>
 			</tr>
 		<% end %>
