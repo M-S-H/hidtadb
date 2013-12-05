@@ -5,4 +5,28 @@ class User < ActiveRecord::Base
 		 :recoverable, :rememberable, :trackable, :validatable
 
 	has_many :audits
+
+	def admin?
+		if self.role == "admin"
+			return true;
+		else
+			return false;
+		end
+	end
+
+	def field?
+		if self.role == "field"
+			return true;
+		else
+			return false;
+		end
+	end
+
+	def entry?
+		if self.role == "entry"
+			return true;
+		else
+			return false;
+		end
+	end
 end

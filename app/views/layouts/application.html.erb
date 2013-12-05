@@ -19,10 +19,11 @@
 
 <div id="content">
 	<nav>
-		<!--  if user==admin -->
-		<a href="/searches">
-			<div class="nav-item"><%= image_tag 'admin.png', width: '75px', height: '50px' %> ADMIN</div>
-		</a>
+		<% if current_user.admin? %>
+			<a href="/control_panel">
+				<div class="nav-item"><%= image_tag 'admin.png', width: '75px', height: '50px' %> ADMIN</div>
+			</a>
+		<% end %>
 		<!-- if user==admin || user==entry  -->
 		<a href="/siezure_reports">
 			<div class="nav-item"><%= image_tag 'report.png', width: '75px', height: '50px' %> REPORTS</div>
@@ -38,7 +39,6 @@
 		<a href="/searches">
 			<div class="nav-item"><%= image_tag 'spyglass.png', width: '75px', height: '50px' %> SEARCH</div>
 		</a>
-
 	</nav>
 
 	<div id="page">
