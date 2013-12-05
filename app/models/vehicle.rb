@@ -16,6 +16,6 @@ class Vehicle < ActiveRecord::Base
   end
 
   validates :year, numericality: { only_integer: true }
-  validates :plate, numericality: {only_integer: true }
+  #validates :plate, numericality: {only_integer: true }
 
 end
