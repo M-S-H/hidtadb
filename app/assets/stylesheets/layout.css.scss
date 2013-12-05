@@ -5,7 +5,7 @@ body {
 	padding: 0px;
 
 	background-color: $lightgrey;
-	font-family: sans-serif;
+	font-family: Roboto, sans-serif;
 }
 
 
@@ -27,12 +27,32 @@ header {
 		color: #FFF;
 		margin-top: 29px;	
 	}
+
+	span
+	{
+		float: right;
+		color: #FFF;
+		margin-top: 30px;
+		padding: 10px;
+		background-color: rgba(0, 0, 0, 0.5);
+		border-radius: 5px;
+	}
+
+	a {
+		margin-left: 20px;
+		color: #FFF;
+		text-decoration: none;
+
+		&:hover {
+			opacity: 0.5;
+		}
+	}
 }
 
 
 #logo {
 	float: left;
-	margin-right: 20px;
+	margin-right: 30px;
 }
 
 

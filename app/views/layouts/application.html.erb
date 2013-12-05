@@ -4,6 +4,7 @@
 	<title>HNM HIDTA</title>
 	<%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => false %>
 	<%= javascript_include_tag "application", "data-turbolinks-track" => false %>
+	<link href='http://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'>
 	<%= csrf_meta_tags %>
 </head>
 <body>
@@ -12,7 +13,14 @@
 <header>
 	<div id="hwrap">
 		<%= image_tag 'logo.png', id: 'logo', width: '100px', height: '100px' %>
+		<h1>HIDTA New Mexico&nbsp</h1>
+		<span>
+			Welcome, <%= current_user.fname + " " + current_user.lname %>
+			<%= link_to 'Logout', '/users/sign_out', :method => :delete %>
+		</span>
+		<!--
 		<h1>HIDTA New Mexico&nbsp<button type="button" class="btn btn-primary"><%= link_to 'Logout', '/users/sign_out', :method => :delete %></button></h1>
+	-->
 	</div>
 </header>
   
