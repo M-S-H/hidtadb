@@ -1,3 +1,5 @@
+#DO NOT ADD BACKUP GEM TO GEMFILE
+
 source 'https://rubygems.org'
 
 gem 'twitter-bootstrap-rails'
