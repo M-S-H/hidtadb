@@ -1,4 +1,6 @@
 $(document).ready(function() {
+
+	var minus = $('<div class="add" id="remove"><img height="15px" width="15px" src="/assets/remove.png"><b>Remove</b></div>');
 	
 	$('#drug-s').click(function() {	
 		var contents;
@@ -17,6 +19,7 @@ $(document).ready(function() {
 		if (contents != "blank")
 		{
 			var obj = $(contents).hide()
+			minus.appendTo(obj);
 			$('#drug-fields').prepend(obj);
 			obj.fadeIn();
 		}
@@ -40,6 +43,7 @@ $(document).ready(function() {
 		if (contents != "blank")
 		{
 			var obj = $(contents).hide()
+			minus.appendTo(obj);
 			$('#weapon-fields').prepend(obj);
 			obj.fadeIn();
 		}
@@ -63,6 +67,7 @@ $(document).ready(function() {
 		if (contents != "blank")
 		{
 			var obj = $(contents).hide()
+			minus.appendTo(obj);
 			$('#subject-fields').prepend(obj);
 			obj.fadeIn();
 		}
@@ -86,8 +91,14 @@ $(document).ready(function() {
 		if (contents != "blank")
 		{
 			var obj = $(contents).hide()
+			minus.appendTo(obj);
 			$('#vehicle-fields').prepend(obj);
 			obj.fadeIn();
 		}
+	});
+
+
+	$('#page').on('click', '#remove', function() {
+		$(this).parent().remove();
 	});
 })
