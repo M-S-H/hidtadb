@@ -1,19 +1,65 @@
 <h1>Control Panel</h1>
 
+<h3>Recent Activity</h3>
 <div id="activity">
-</div>
-<div class="btn-group">
-  <button type="button" class="btn btn-primary">Add User</button>
-  <button type="button" class="btn btn-primary">Delete User</button>
-  <button type="button" class="btn btn-primary">Update User</button>
-</div>
-<br>
-<br>
-<div>
-<button type="button" class="btn btn-primary">Generate Audit Log</button>
+
+	<table class="listtable">
+		<thead>
+			<tr>
+				<th>User</th>
+				<th>Action</th>
+				<th>Record Type</th>
+				<th>Record</th>
+				<th>Date/Time</th>
+			</tr>
+		</thead>
+
+		<tbody>
+			<% @audits.each do |audit| %>
+				<tr>
+					<td><%= audit.user.fname %></td>
+					<td><%= audit.action %></td>
+					<td><%= audit.recordtype %></td>
+					<td><%= audit.record_id %></td>
+					<td><%= audit.created_at.to_time %></td>
+				</tr>
+			<% end %>
+		</tbody>
+	</table>
+
+	<%= link_to 'View All', '/audits' %>
 </div>
 
-<br>
-<div>
-<button type="button" class="btn btn-primary">Manual System Backup</button>
+<div class="divider"></div>
+
+<h3>Users</h3>
+<div id="users">
+	<table class="listtable">
+		<thead>
+			<tr>
+				<th>Fist Name</th>
+				<th>Last Name</th>
+				<th>Email</th>
+				<th>Role</th>
+			</tr>
+		</thead>
+
+		<tbody>
+			<% @users.each do |u| %>
+				<% if u != current_user %>
+					<tr>
+						<td><%= u.fname %></td>
+						<td><%= u.lname %></td>
+						<td><%= u.email %></td>
+						<td>
+							<%= form_tag "/update_user_role/#{u.id}", method: :post, id: "r#{u.id}", remote: true do %>
+								<%= select_tag "new_role", options_for_select([ "field", "entry"], u.role), :onchange => ("$('#r#{u.id}').submit()") %>
+							<% end %>
+						</td>
+					</tr>
+				<% end %>
+			<% end %>
+		</tbody>
+	</table>
 </div>
+>>>>>>> af2380a1365a1b2c50a327b0e5385cf21c9cee81
