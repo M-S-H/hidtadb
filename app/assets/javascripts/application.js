@@ -35,10 +35,26 @@
 
 
 $(function () {
-  $('.popover-test').popover({ 
+  $("refresh_seizure").popover({ 
     html : true,
-    title: "This is a test",
-    content: "<b>hello popover world</b>"
+    title: "Do you really want to do this?",
+    content: "<b>This will refresh this data and reset the 5 year time fram for sotoring data.</b>"
+  });
+});
+
+$(function () {
+  $("refresh_vehicle").popover({ 
+    html : true,
+    title: "Do you really want to do this?",
+    content: "<b>This will refresh this data and reset the 5 year time fram for sotoring data.</b>"
+  });
+});
+
+$(function () {
+  $("refresh_subject").popover({ 
+    html : true,
+    title: "Do you really want to do this?",
+    content: "<b>This will refresh this data and reset the 5 year time fram for sotoring data.</b>"
   });
 });
 
