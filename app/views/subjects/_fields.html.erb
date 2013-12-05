@@ -1,15 +1,15 @@
 <table width="100%">
 	<tr>
 		<td>
-			<div class="field" id="name">
-				<%= f.label :name %><br>
-				<%= f.text_field :name %>
+			<div class="field">
+				<%= f.label :name, "Name" %><br>
+				<%= f.text_field :name%>
 			</div>
 		</td>
 		<td>
 			<div class="field">
-				<%= f.label :dob %><br>
-				<%= f.date_select :dob %>
+				<%= f.label :dobv, "DOB" %><br>
+				<%= f.date_select :dob, {:prompt => { :day => 'Select Day', :month => 'Select Month', :year => 'Select Year' }}, {:class => 'date-select'}  %>
 			</div>
 		</td>
 		<td>
