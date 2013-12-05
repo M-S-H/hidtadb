@@ -3,7 +3,8 @@
 		<td>
 			<div class="field">
 				<%= f.label :name, "Name" %><br>
-				<%= f.text_field :name%>
+				<%= f.text_field :name, :required => true, :minlength => 2, :placeholder => 'Name' %>
+				<!-- <%= f.text_field :name, :required => true, :digits => false, :placeholder => 'Name' %> -->
 			</div>
 		</td>
 		<td>
@@ -15,7 +16,7 @@
 		<td>
 			<div class="field">
 				<%= f.label :ssn, "SSN" %><br>
-				<%= f.text_field :ssn %>
+				<%= f.text_field :ssn , :minlength => 9, :required => false, :placeholder => '9-Digit SSN' %>
 			</div>
 		</td>
 	</tr>

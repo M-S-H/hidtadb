@@ -33,6 +33,7 @@
 //= require bootstrap-typeahead.js
 
 
+
 $(function () {
   $('.popover-test').popover({ 
     html : true,
@@ -40,6 +41,10 @@ $(function () {
     content: "<b>hello popover world</b>"
   });
 });
+
+$(function () {
+	$("#new_subject").validate();
+})
 
 // validate signup form on keyup and submit
 /*$(function () {
