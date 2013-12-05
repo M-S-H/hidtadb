@@ -26,6 +26,8 @@ HIDTA::Application.routes.draw do
 
 	get 'control_panel', to: 'admin_controller#control_panel'
 
+	post '/update_user_role/:id', to: 'admin_controller#change_role'
+
 	# The priority is based upon order of creation: first created -> highest priority.
 	# See how all your routes lay out with "rake routes".
 
